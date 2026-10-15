@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 560" width="100%" height="100%" fill="none">
+  <defs>
+    <filter id="shadow1" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#2F352B" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <!-- Soft organic backdrop in #EAE2D6 -->
+  <path d="M 120 60 C 340 -20, 620 40, 640 260 C 660 480, 420 540, 200 520 C 40 500, 20 280, 120 60 Z" fill="#EAE2D6"/>
+  <!-- Secondary soft organic shape -->
+  <path d="M 220 120 C 460 70, 580 180, 560 380 C 540 520, 310 490, 190 410 C 90 340, 110 160, 220 120 Z" fill="#F7F2EB" opacity="0.8"/>
+  
+  <!-- Main Clinical Card Container -->
+  <g filter="url(#shadow1)">
+    <rect x="80" y="60" width="520" height="420" rx="28" fill="#FFFFFF" stroke="#EEEEEE" stroke-width="2"/>
+    
+    <!-- Top Clinical Bar -->
+    <rect x="80" y="60" width="520" height="64" rx="28" fill="#F7F2EB"/>
+    <circle cx="116" cy="92" r="14" fill="#8B9A6E" fill-opacity="0.2"/>
+    <path d="M 111 92 L 115 96 L 122 88" stroke="#8B9A6E" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="140" y="97" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#2F352B">GastroCare Clinical Consultation Suite</text>
+    <rect x="470" y="79" width="100" height="26" rx="13" fill="#8B9A6E"/>
+    <text x="486" y="96" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">ACTIVE CLINIC</text>
+
+    <!-- Doctor & Patient Consultation Vector Art -->
+    <!-- Left: Specialist representation -->
+    <g transform="translate(110, 150)">
+      <circle cx="90" cy="70" r="46" fill="#EAE2D6"/>
+      <!-- Doctor Stethoscope & Lab coat -->
+      <path d="M 40 210 C 40 145, 140 145, 140 210 Z" fill="#8B9A6E" opacity="0.9"/>
+      <path d="M 68 145 L 90 190 L 112 145 Z" fill="#FFFFFF"/>
+      <path d="M 75 140 C 75 180, 105 180, 105 140" stroke="#2F352B" stroke-width="2" fill="none"/>
+      <!-- Head & Smile -->
+      <circle cx="90" cy="70" r="32" fill="#F7F2EB"/>
+      <path d="M 78 68 Q 90 75 102 68" stroke="#2F352B" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <circle cx="82" cy="62" r="2.5" fill="#2F352B"/>
+      <circle cx="98" cy="62" r="2.5" fill="#2F352B"/>
+      <!-- Badge -->
+      <rect x="35" y="220" width="110" height="34" rx="8" fill="#F7F2EB" stroke="#EEEEEE"/>
+      <text x="47" y="235" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#2F352B">Dr. Maya Carter</text>
+      <text x="47" y="247" font-family="'Inter', sans-serif" font-size="9" fill="#8B9A6E">GI Lead &amp; Endoscopy</text>
+    </g>
+
+    <!-- Center/Right: Diagnostic Screen with Digestive Health Flow Chart -->
+    <g transform="translate(300, 150)">
+      <rect x="0" y="0" width="260" height="190" rx="16" fill="#F7F2EB" stroke="#8B9A6E" stroke-width="1.5"/>
+      <rect x="16" y="16" width="228" height="28" rx="8" fill="#FFFFFF"/>
+      <text x="28" y="34" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#2F352B">Diagnostic Flow &amp; Mucosal Mapping</text>
+      
+      <!-- Digestive System Waveform & Flow Vector -->
+      <path d="M 30 110 C 60 70, 80 140, 110 90 C 140 50, 160 130, 200 80 C 220 60, 230 100, 240 95" 
+            stroke="#8B9A6E" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <circle cx="110" cy="90" r="6" fill="#8B9A6E"/>
+      <circle cx="200" cy="80" r="6" fill="#66744E"/>
+      <text x="120" y="93" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#66744E">Upper GI Tract</text>
+      <text x="160" y="130" font-family="'Inter', sans-serif" font-size="9" fill="#2F352B">HD Endoscopic Biomarkers: Normal</text>
+      <line x1="30" y1="150" x2="230" y2="150" stroke="#EEEEEE" stroke-width="1"/>
+      <rect x="30" y="158" width="80" height="18" rx="6" fill="#8B9A6E" fill-opacity="0.15"/>
+      <text x="38" y="171" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#8B9A6E">BIOPSY: CLEAR</text>
+      <rect x="120" y="158" width="90" height="18" rx="6" fill="#EAE2D6"/>
+      <text x="128" y="171" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#2F352B">MOTILITY: BALANCED</text>
+    </g>
+
+    <!-- Bottom Stat Pill inside Card -->
+    <g transform="translate(120, 420)">
+      <rect x="0" y="0" width="440" height="42" rx="21" fill="#F7F2EB"/>
+      <circle cx="24" cy="21" r="12" fill="#8B9A6E"/>
+      <text x="21" y="25" font-family="'Inter', sans-serif" font-size="12" font-weight="800" fill="#FFFFFF">&#10003;</text>
+      <text x="46" y="26" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#2F352B">Over 14,200+ Diagnostic Endoscopies Conducted Safely</text>
+    </g>
+  </g>
+
+  <!-- Floating Badge 1: Patient Trust -->
+  <g transform="translate(50, 360)" filter="url(#shadow1)">
+    <rect width="180" height="68" rx="16" fill="#FFFFFF" stroke="#8B9A6E" stroke-width="1.5"/>
+    <circle cx="34" cy="34" r="18" fill="#EAE2D6"/>
+    <path d="M 28 34 L 32 38 L 40 28" stroke="#8B9A6E" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="60" y="28" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="800" fill="#2F352B">99.4%</text>
+    <text x="60" y="44" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#66744E">Patient Comfort Rating</text>
+    <text x="60" y="56" font-family="'Inter', sans-serif" font-size="8" fill="#8B9A6E">Accredited GI Center</text>
+  </g>
+
+  <!-- Floating Badge 2: Rapid Results -->
+  <g transform="translate(480, 20)" filter="url(#shadow1)">
+    <rect width="170" height="64" rx="16" fill="#FFFFFF" stroke="#EEEEEE" stroke-width="1.5"/>
+    <circle cx="30" cy="32" r="16" fill="#8B9A6E"/>
+    <text x="23" y="37" font-family="'Inter', sans-serif" font-size="14" fill="#FFFFFF">&#9881;</text>
+    <text x="54" y="28" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#2F352B">Fast-Track Results</text>
+    <text x="54" y="44" font-family="'Inter', sans-serif" font-size="10" fill="#66744E">Within 24–48 Hours</text>
+    <text x="54" y="55" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#8B9A6E">&#8226; Online Portal Ready</text>
+  </g>
+</svg>

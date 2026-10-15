@@ -1,0 +1,181 @@
+/* ==========================================================================
+   GASTROCARE - Responsive Stylesheet
+   Breakpoints: 320px, 360px, 375px, 390px, 414px, 768px, 820px, 1024px, 1280px, 1440px, 1920px
+   Zero horizontal overflow, fluid scaling, mobile navigation & stacked layouts
+   ========================================================================== */
+
+/* Large Desktops (1440px - 1920px) */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* Standard Desktops & Laptops (1024px - 1280px) */
+@media (max-width: 1199.98px) {
+  .gc-section-padding {
+    padding: 4.5rem 0;
+  }
+
+  .dashboard-sidebar {
+    width: 250px;
+  }
+}
+
+/* Tablets (768px - 1023.98px) */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: var(--gc-card-bg);
+    border: 1px solid var(--gc-border);
+    border-radius: var(--gc-radius-md);
+    padding: 1.5rem;
+    margin-top: 1rem;
+    box-shadow: var(--gc-shadow-md);
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.75rem 0.5rem !important;
+    border-bottom: 1px solid var(--gc-border-light);
+  }
+
+  .navbar-nav .nav-link:last-child {
+    border-bottom: none;
+  }
+
+  .journey-timeline {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .journey-timeline::before {
+    top: 0;
+    bottom: 0;
+    left: 36px;
+    right: auto;
+    width: 2px;
+    height: 100%;
+    background: repeating-linear-gradient(180deg, var(--gc-primary) 0, var(--gc-primary) 8px, transparent 8px, transparent 16px);
+  }
+
+  .journey-step {
+    text-align: left;
+    padding-left: 90px;
+    position: relative;
+  }
+
+  .journey-node {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-bottom: 0;
+  }
+
+  /* Dashboard mobile toggle */
+  .dashboard-wrap {
+    flex-direction: column;
+  }
+
+  .dashboard-sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    bottom: 0;
+    width: 280px;
+    box-shadow: var(--gc-shadow-lg);
+    transition: left 0.3s ease;
+  }
+
+  .dashboard-sidebar.show {
+    left: 0;
+  }
+
+  .dashboard-main {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Small Tablets & Large Phones (576px - 767.98px) */
+@media (max-width: 767.98px) {
+  .gc-section-padding {
+    padding: 3.5rem 0;
+  }
+
+  .gc-section-header {
+    margin-bottom: 2.2rem;
+  }
+
+  .results-detail-panel {
+    margin-top: 1.5rem;
+  }
+
+  .gc-footer {
+    padding: 3.5rem 0 1.5rem;
+  }
+}
+
+/* Mobile Phones (320px - 575.98px) */
+@media (max-width: 575.98px) {
+  h1 { font-size: 1.85rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+
+  .gc-brand-logo {
+    height: 36px;
+  }
+
+  .btn {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.88rem;
+  }
+
+  .btn-lg {
+    padding: 0.8rem 1.6rem;
+    font-size: 0.95rem;
+  }
+
+  .gc-card {
+    padding: 1.35rem;
+  }
+
+  .doctor-content {
+    padding: 1.2rem;
+  }
+
+  .journey-step {
+    padding-left: 75px;
+  }
+
+  .journey-node {
+    width: 58px;
+    height: 58px;
+    font-size: 1rem;
+  }
+
+  .nav-controls-group {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .nav-control-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 0.85rem;
+  }
+
+  .table-responsive {
+    border: none;
+  }
+}
+
+/* Ultra Narrow Phones (320px - 360px) */
+@media (max-width: 360px) {
+  .gc-brand-logo {
+    height: 30px;
+  }
+
+  .btn {
+    font-size: 0.82rem;
+    padding: 0.55rem 1rem;
+  }
+}

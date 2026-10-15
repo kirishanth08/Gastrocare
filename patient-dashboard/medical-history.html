@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical History | My GastroCare Patient Portal</title>
+  <meta name="description" content="Medical History Timeline - My GastroCare Portal">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg">
+  
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('gastrocare-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      const savedDir = localStorage.getItem('gastrocare-direction') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-wrap">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="d-flex align-items-center justify-content-between mb-4">
+        <a href="../index.html" class="d-block" aria-label="GastroCare Home">
+          <img src="../assets/images/logo/gastrocare-logo.svg" alt="GastroCare" class="gc-brand-logo">
+        </a>
+      </div>
+
+      <div class="sidebar-patient-card mb-4">
+        <div class="d-flex align-items-center gap-3">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--gc-primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.95rem; flex-shrink: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+            AM
+          </div>
+          <div>
+            <strong class="d-block small" style="line-height: 1.2; font-size: 0.92rem;">Alex Morgan</strong>
+            <small style="font-size: 0.76rem;">Patient ID: #GC-8841</small>
+          </div>
+        </div>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li>
+          <a href="dashboard.html" class="sidebar-link">Overview</a>
+        </li>
+        <li>
+          <a href="appointments.html" class="sidebar-link">Appointments</a>
+        </li>
+        <li>
+          <a href="prep-instructions.html" class="sidebar-link">Prep Instructions</a>
+        </li>
+        <li>
+          <a href="test-results.html" class="sidebar-link">Test Results</a>
+        </li>
+        <li>
+          <a href="medical-history.html" class="sidebar-link active">Medical History</a>
+        </li>
+        <li>
+          <a href="documents.html" class="sidebar-link">Documents</a>
+        </li>
+        <li>
+          <a href="profile.html" class="sidebar-link">My Profile</a>
+        </li>
+      </ul>
+
+      <div class="mt-auto pt-3 border-top">
+        <a href="../index.html" class="sidebar-link text-muted small">
+          <span>&#8592;</span> Return to Public Site
+        </a>
+        <a href="../auth/login.html" class="sidebar-link text-danger small">
+          <span>&#128274;</span> Sign Out
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-main">
+      <header class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+        <div class="d-flex align-items-center gap-3">
+          <button type="button" class="btn btn-sm btn-gc-outline d-lg-none" id="sidebarToggleBtn" aria-label="Toggle Navigation Sidebar">
+            &#9776; Menu
+          </button>
+          <div>
+            <a href="../index.html" class="text-decoration-none" style="color: inherit;" title="Return to GastroCare Homepage"><h2 class="h4 mb-0 d-inline-block">MY GASTROCARE</h2></a>
+            <small class="text-muted">Private Patient Health Companion (Fictional / Demo Portal)</small>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <button type="button" class="nav-control-btn theme-toggle-btn" aria-label="Toggle Theme">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+          <button type="button" class="rtl-toggle-btn">RTL</button>
+          <a href="../appointment.html" class="btn btn-sm btn-gc-primary">Book New Visit</a>
+        </div>
+      </header>
+
+      
+  <section class="mb-4 reveal">
+    <h1 class="h3 mb-1">MEDICAL &amp; CLINICAL HISTORY</h1>
+    <p class="text-muted">Chronological timeline of past gastroenterology visits, historic procedures, and recorded diagnoses.</p>
+  </section>
+
+  <section class="mb-4 reveal">
+    <div class="p-4 p-md-5 bg-white rounded border shadow-sm">
+      <div class="journey-timeline" style="margin-top: 0;">
+        <div class="journey-step">
+          <div class="journey-node">2026</div>
+          <h6>Oct 2026</h6>
+          <h5 class="h6 mb-1">Upper Endoscopy (EGD)</h5>
+          <p class="small text-muted mb-0">Antral erythema, H. pylori negative, celiac excluded.</p>
+        </div>
+        <div class="journey-step">
+          <div class="journey-node">2026</div>
+          <h6>Sep 2026</h6>
+          <h5 class="h6 mb-1">Initial GI Consultation</h5>
+          <p class="small text-muted mb-0">Evaluated for postprandial fullness and chronic reflux symptoms.</p>
+        </div>
+        <div class="journey-step">
+          <div class="journey-node">2024</div>
+          <h6>May 2024</h6>
+          <h5 class="h6 mb-1">Baseline Colonoscopy</h5>
+          <p class="small text-muted mb-0">Single 4mm tubular adenoma removed at cecum. Surveillance in 5 yrs.</p>
+        </div>
+        <div class="journey-step">
+          <div class="journey-node">2022</div>
+          <h6>Nov 2022</h6>
+          <h5 class="h6 mb-1">H. Pylori Breath Test</h5>
+          <p class="small text-muted mb-0">Urea breath assay conducted. Negative result.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-4 reveal">
+    <div class="p-4 bg-white rounded border shadow-sm">
+      <h4 class="h5 mb-3 text-dark">Recorded Clinical Conditions</h4>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="portal-subcard h-100">
+            <strong class="d-block text-dark mb-1">Mild Reflux (GERD)</strong>
+            <small class="text-muted d-block">Diagnosed 2024 &bull; Managed via diet &amp; PPI</small>
+            <span class="badge-gc badge-available mt-2">Active Surveillance</span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="portal-subcard h-100">
+            <strong class="d-block text-dark mb-1">History of Colon Polyp</strong>
+            <small class="text-muted d-block">4mm Tubular Adenoma (Excised May 2024)</small>
+            <span class="badge-gc badge-reviewed mt-2">Next Colonoscopy: 2029</span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="portal-subcard h-100">
+            <strong class="d-block text-dark mb-1">Lactose Sensitivity</strong>
+            <small class="text-muted d-block">Self-reported functional intolerance</small>
+            <span class="badge-gc badge-pending mt-2">Dietary Adjustment</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Allergies & Family Health Matrix -->
+  <section class="mb-4 reveal">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="p-4 bg-white rounded border shadow-sm h-100">
+          <h5 class="h6 fw-bold mb-3 text-dark">Allergies &amp; Medication Sensitivities</h5>
+          <div class="d-flex flex-column gap-2 small">
+            <div class="portal-subcard py-2 px-3 d-flex justify-content-between align-items-center">
+              <div>
+                <strong class="text-dark d-block">Penicillin G / Amoxicillin</strong>
+                <small class="text-muted">Reaction: Mild Urticarial Rash (Childhood)</small>
+              </div>
+              <span class="badge-gc text-danger border-danger">Moderate</span>
+            </div>
+            <div class="portal-subcard py-2 px-3 d-flex justify-content-between align-items-center">
+              <div>
+                <strong class="text-dark d-block">NSAIDs (High-Dose Ibuprofen)</strong>
+                <small class="text-muted">Reaction: Gastric irritation / Epigastric ache</small>
+              </div>
+              <span class="badge-gc badge-pending">Sensitivity</span>
+            </div>
+            <div class="portal-subcard py-2 px-3 d-flex justify-content-between align-items-center">
+              <div>
+                <strong class="text-dark d-block">Surgical Latex / Adhesives</strong>
+                <small class="text-muted">Verified Negative &bull; Well tolerated</small>
+              </div>
+              <span class="badge-gc badge-available">No Allergy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 bg-white rounded border shadow-sm h-100">
+          <h5 class="h6 fw-bold mb-3 text-dark">Family GI &amp; Colorectal History</h5>
+          <div class="d-flex flex-column gap-2 small">
+            <div class="portal-subcard py-2 px-3">
+              <strong class="text-dark d-block">Maternal Grandfather: Colon Adenoma</strong>
+              <small class="text-muted">Diagnosed age 68 &bull; Screened regularly. No early Lynch syndrome indications.</small>
+            </div>
+            <div class="portal-subcard py-2 px-3">
+              <strong class="text-dark d-block">Father: Hiatal Hernia &amp; GERD</strong>
+              <small class="text-muted">Diagnosed age 54 &bull; Managed conservatively with H2-blockers and lifestyle.</small>
+            </div>
+            <div class="portal-subcard py-2 px-3">
+              <strong class="text-dark d-block">Inflammatory Bowel Disease (IBD)</strong>
+              <small class="text-muted">No family history of Crohn's disease or Ulcerative Colitis reported.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-4 reveal">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="p-4 bg-white rounded border h-100">
+          <h5 class="h6 fw-bold text-dark">Prior Endoscopic Polypectomy Records</h5>
+          <p class="small text-muted mb-0">May 2024 colonoscopy verified clean margins on cold snare polypectomy of 4mm ascending colon polyp. Next surveillance due May 2029.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-4 bg-white rounded border h-100">
+          <h5 class="h6 fw-bold text-dark">Historic GI Medications &amp; Tolerances</h5>
+          <p class="small text-muted mb-0">Omeprazole 20mg well tolerated. Famotidine 20mg PRN well tolerated. No recorded adverse drug reactions or sedation complications.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete Health Record PDF Export Bar -->
+  <section class="mb-4 reveal">
+    <div class="portal-subcard d-flex justify-content-between align-items-center flex-wrap gap-3 p-4">
+      <div>
+        <h5 class="h6 fw-bold mb-1 text-dark">Export Consolidated GI Health History (PDF)</h5>
+        <p class="small text-muted mb-0">Certified clinical abstract suitable for outside physician consults or insurance verification.</p>
+      </div>
+      <div class="d-flex gap-2">
+        <button class="btn btn-sm btn-gc-outline" onclick="window.print()">Print History Summary</button>
+        <button class="btn btn-sm btn-gc-primary" onclick="showPortalToast('&#128190; Downloading verified medical abstract: Alex_Morgan_GI_History.pdf...')">&#128190; Download Summary</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-2">
+    <div class="portal-subcard text-center py-3">
+      <small class="text-dark">To update your medical history or report outside laboratory procedures, call our records coordinator at <strong>(206) 555-0182</strong>.</small>
+    </div>
+  </section>
+
+
+      <div class="gc-disclaimer-box mt-5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <small><strong>Template Demo Notice:</strong> Dashboard records, procedure dates, prep checklists, and laboratory values shown are fictional demonstration data. Patients should always follow actual instructions provided by their treating healthcare team.</small>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/prep.js"></script>
+  <script src="../assets/js/results.js"></script>
+</body>
+</html>

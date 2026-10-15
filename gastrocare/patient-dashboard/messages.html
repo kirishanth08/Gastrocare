@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages | My GastroCare Patient Portal</title>
+  <meta name="description" content="Care Team Messaging - My GastroCare Portal">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg">
+  
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('gastrocare-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      const savedDir = localStorage.getItem('gastrocare-direction') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-wrap">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="d-flex align-items-center justify-content-between mb-4">
+        <a href="../index.html" class="d-block" aria-label="GastroCare Home">
+          <img src="../assets/images/logo/gastrocare-logo.svg" alt="GastroCare" class="gc-brand-logo">
+        </a>
+      </div>
+
+      <div class="p-3 bg-secondary rounded border mb-3">
+        <div class="d-flex align-items-center gap-2">
+          <div style="width: 38px; height: 38px; border-radius: 50%; background-color: var(--gc-primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: bold;">
+            AM
+          </div>
+          <div>
+            <strong class="d-block small" style="line-height: 1.2;">Alex Morgan</strong>
+            <small class="text-muted" style="font-size: 0.75rem;">Patient ID: #GC-8841</small>
+          </div>
+        </div>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li>
+          <a href="dashboard.html" class="sidebar-link">Overview</a>
+        </li>
+        <li>
+          <a href="appointments.html" class="sidebar-link">Appointments</a>
+        </li>
+        <li>
+          <a href="prep-instructions.html" class="sidebar-link">Prep Instructions</a>
+        </li>
+        <li>
+          <a href="test-results.html" class="sidebar-link">Test Results</a>
+        </li>
+        <li>
+          <a href="medical-history.html" class="sidebar-link">Medical History</a>
+        </li>
+        <li>
+          <a href="documents.html" class="sidebar-link">Documents</a>
+        </li>
+        <li>
+          <a href="profile.html" class="sidebar-link">My Profile</a>
+        </li>
+      </ul>
+
+      <div class="mt-auto pt-3 border-top">
+        <a href="../index.html" class="sidebar-link text-muted small">
+          <span>&#8592;</span> Return to Public Site
+        </a>
+        <a href="../auth/login.html" class="sidebar-link text-danger small">
+          <span>&#128274;</span> Sign Out
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-main">
+      <header class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+        <div class="d-flex align-items-center gap-3">
+          <button type="button" class="btn btn-sm btn-gc-outline d-lg-none" id="sidebarToggleBtn" aria-label="Toggle Navigation Sidebar">
+            &#9776; Menu
+          </button>
+          <div>
+            <a href="../index.html" class="text-decoration-none" style="color: inherit;" title="Return to GastroCare Homepage"><h2 class="h4 mb-0 d-inline-block">MY GASTROCARE</h2></a>
+            <small class="text-muted">Private Patient Health Companion (Fictional / Demo Portal)</small>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <button type="button" class="nav-control-btn theme-toggle-btn" aria-label="Toggle Theme">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+          <button type="button" class="rtl-toggle-btn">RTL</button>
+          <a href="../appointment.html" class="btn btn-sm btn-gc-primary">Book New Visit</a>
+        </div>
+      </header>
+
+      
+  <section class="mb-4 reveal">
+    <h1 class="h3 mb-1">CARE TEAM MESSAGING</h1>
+    <p class="text-muted">Secure, HIPAA-compliant communication with your gastroenterologist and nurse navigators.</p>
+  </section>
+
+  <section class="mb-4 reveal">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="p-3 bg-white rounded border shadow-sm">
+          <h5 class="h6 text-muted mb-3">Active Care Conversations</h5>
+          <div class="p-2 bg-secondary rounded border mb-2 cursor-pointer">
+            <strong class="d-block small">GastroCare Clinic Support</strong>
+            <small class="text-muted">Care Navigator &bull; Online</small>
+          </div>
+          <div class="p-2 bg-light rounded border mb-2 cursor-pointer">
+            <strong class="d-block small">Dr. Maya Carter, MD</strong>
+            <small class="text-muted">Physician &bull; Active today</small>
+          </div>
+          <div class="p-2 bg-light rounded border cursor-pointer">
+            <strong class="d-block small">GastroCare Billing Desk</strong>
+            <small class="text-muted">Insurance Navigation</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-8">
+        <div class="p-4 bg-white rounded border shadow-sm d-flex flex-direction-column" style="height: 520px; display: flex; flex-direction: column;">
+          <div class="border-bottom pb-3 mb-3 d-flex justify-content-between align-items-center">
+            <div>
+              <h5 class="mb-0">GastroCare Clinic Care Navigator</h5>
+              <small class="text-muted">Direct messaging channel for pre-procedure questions and refills.</small>
+            </div>
+            <span class="badge-gc badge-available">&#9679; Available</span>
+          </div>
+
+          <div class="flex-grow-1 overflow-auto pe-2" id="chatMessagesList" style="max-height: 340px;">
+            <div class="d-flex justify-content-start mb-3">
+              <div class="bg-light border p-3 rounded shadow-sm" style="max-width: 75%;">
+                <strong class="d-block small mb-1">Clinic Navigator (Sarah, RN):</strong>
+                <p class="mb-0 text-muted small">Hello Alex! This is a reminder regarding your upcoming Upper Endoscopy on Oct 24. Do you have any questions regarding your fasting instructions?</p>
+                <small class="d-block mt-1 text-muted" style="font-size: 0.7rem;">Yesterday at 04:15 PM</small>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-end mb-3">
+              <div class="p-3 rounded shadow-sm text-white" style="max-width: 75%; background-color: var(--gc-primary);">
+                <p class="mb-0 text-white small">Hi Sarah, thank you! I reviewed the prep checklist in the portal and confirmed my driver for Saturday morning.</p>
+                <small class="d-block text-end mt-1 text-white-50" style="font-size: 0.7rem;">Yesterday at 05:02 PM</small>
+              </div>
+            </div>
+          </div>
+
+          <form id="chatMessageForm" class="mt-3 pt-3 border-top">
+            <div class="input-group">
+              <input type="text" id="chatMessageInput" class="form-control" placeholder="Type your non-urgent question here..." required>
+              <button class="btn btn-gc-primary" type="submit">Send Message</button>
+            </div>
+            <small class="text-muted d-block mt-1" style="font-size: 0.72rem;">Demonstration chat. Routine messages are responded to within 24 business hours.</small>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-4 reveal">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="p-4 bg-white rounded border h-100">
+          <h5>Non-Urgent Communication Notice</h5>
+          <p class="small text-muted mb-0">Messaging is intended for general clinic questions, appointment reminders, and dietary clarifications. Typical reply time is 24 business hours.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-4 bg-white rounded border h-100">
+          <h5>Prescription Refill Inquiries</h5>
+          <p class="small text-muted mb-0">For medication refills on existing GI prescriptions, please include your preferred pharmacy name and phone number in your message.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-4 reveal">
+    <div class="p-4 bg-secondary rounded border text-center">
+      <h5>24/7 Clinical Emergency Line</h5>
+      <p class="small text-muted mb-0">If you are experiencing severe acute abdominal pain, persistent vomiting, or gastrointestinal bleeding, call 911 or our 24/7 on-call triage line at (206) 555-0182.</p>
+    </div>
+  </section>
+
+  <section class="mb-2">
+    <div class="p-3 bg-light rounded border text-center">
+      <small class="text-muted">Interactive Messaging Demo &bull; GastroCare Patient Portal</small>
+    </div>
+  </section>
+
+
+      <div class="gc-disclaimer-box mt-5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <small><strong>Template Demo Notice:</strong> Dashboard records, procedure dates, prep checklists, and laboratory values shown are fictional demonstration data. Patients should always follow actual instructions provided by their treating healthcare team.</small>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/prep.js"></script>
+  <script src="../assets/js/results.js"></script>
+</body>
+</html>

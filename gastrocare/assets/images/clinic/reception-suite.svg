@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 440" width="100%" height="100%" fill="none">
+  <rect width="680" height="440" rx="24" fill="#F7F2EB"/>
+  <g transform="translate(40, 30)">
+    <rect width="600" height="380" rx="20" fill="#FFFFFF" stroke="#EEEEEE" stroke-width="2"/>
+    <rect width="600" height="60" rx="20" fill="#EAE2D6"/>
+    <text x="30" y="38" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="800" fill="#2F352B">GastroCare Clinic Headquarters &amp; Endoscopy Wing</text>
+    
+    <g transform="translate(30, 90)">
+      <rect width="255" height="120" rx="12" fill="#F7F2EB"/>
+      <text x="20" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#2F352B">Downtown Medical Campus</text>
+      <text x="20" y="55" font-family="'Inter', sans-serif" font-size="11" fill="#66744E">480 Bellevue Pavilion Way, Suite 400</text>
+      <text x="20" y="75" font-family="'Inter', sans-serif" font-size="11" fill="#66744E">Seattle, WA 98101</text>
+      <text x="20" y="100" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#8B9A6E">&#9992; Direct Airport Transit Access</text>
+
+      <rect x="285" y="0" width="255" height="120" rx="12" fill="#F7F2EB"/>
+      <text x="20" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#2F352B">Operating Hours</text>
+      <text x="20" y="55" font-family="'Inter', sans-serif" font-size="11" fill="#66744E">Monday – Friday: 7:30 AM – 6:00 PM</text>
+      <text x="20" y="75" font-family="'Inter', sans-serif" font-size="11" fill="#66744E">Saturday (Procedures Only): 8:00 AM – 2:00 PM</text>
+      <text x="20" y="100" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#8B9A6E">&#10003; 24/7 On-Call GI Emergency Line</text>
+    </g>
+
+    <!-- Interactive-styled map vector simulation -->
+    <g transform="translate(30, 230)">
+      <rect width="540" height="120" rx="14" fill="#EAE2D6" stroke="#8B9A6E" stroke-width="1.2"/>
+      <!-- Grid streets -->
+      <line x1="20" y1="60" x2="520" y2="60" stroke="#FFFFFF" stroke-width="8"/>
+      <line x1="180" y1="10" x2="180" y2="110" stroke="#FFFFFF" stroke-width="8"/>
+      <line x1="380" y1="10" x2="380" y2="110" stroke="#FFFFFF" stroke-width="8"/>
+      <!-- GastroCare Pin -->
+      <circle cx="180" cy="60" r="16" fill="#8B9A6E" stroke="#FFFFFF" stroke-width="3"/>
+      <circle cx="180" cy="60" r="6" fill="#FFFFFF"/>
+      <rect x="210" y="44" width="170" height="32" rx="8" fill="#FFFFFF" stroke="#EEEEEE"/>
+      <text x="220" y="65" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#2F352B">GastroCare Clinic Pavilion</text>
+    </g>
+  </g>
+</svg>

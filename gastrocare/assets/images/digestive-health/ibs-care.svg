@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460" width="100%" height="100%" fill="none">
+  <rect width="680" height="460" rx="24" fill="#F7F2EB"/>
+  <g transform="translate(40, 30)">
+    <rect width="600" height="400" rx="20" fill="#FFFFFF" stroke="#EEEEEE" stroke-width="2"/>
+    <rect width="600" height="60" rx="20" fill="#EAE2D6"/>
+    <text x="30" y="38" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="800" fill="#2F352B">The 4-Pillar GastroCare IBS Care Protocol</text>
+    
+    <!-- Visual 4 Circles / Pathways -->
+    <g transform="translate(30, 90)">
+      <!-- Pillar 1 -->
+      <rect x="0" y="0" width="260" height="130" rx="14" fill="#F7F2EB" stroke="#8B9A6E" stroke-width="1.2"/>
+      <text x="20" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#2F352B">1. Accurate Subtype Phenotyping</text>
+      <text x="20" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#66744E">Detailed differentiation between IBS-C (constipation), IBS-D (diarrhea), and IBS-M (mixed) using Rome IV clinical criteria and inflammatory biomarkers.</text>
+      <text x="20" y="112" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#8B9A6E">&#10003; Calprotectin &amp; Celiac Excluded</text>
+
+      <!-- Pillar 2 -->
+      <rect x="280" y="0" width="260" height="130" rx="14" fill="#F7F2EB" stroke="#EEEEEE"/>
+      <text x="20" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#2F352B">2. Microbiome &amp; SIBO Breath Testing</text>
+      <text x="20" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#66744E">Assessing small intestinal bacterial overgrowth via lactulose breath tests to identify whether fermentation is contributing to chronic bloating.</text>
+      <text x="20" y="112" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#66744E">&#10003; Quad-Gas Chromatography</text>
+
+      <!-- Pillar 3 -->
+      <rect x="0" y="150" width="260" height="130" rx="14" fill="#F7F2EB" stroke="#EEEEEE"/>
+      <text x="20" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#2F352B">3. Clinical Low-FODMAP Nutrition</text>
+      <text x="20" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#66744E">Structured 3-phase nutritional program guided by certified GI dietitians: elimination, systematic reintroduction, and long-term personalization.</text>
+      <text x="20" y="112" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#8B9A6E">&#10003; 1-on-1 Dietitian Coaching</text>
+
+      <!-- Pillar 4 -->
+      <rect x="280" y="150" width="260" height="130" rx="14" fill="#F7F2EB" stroke="#8B9A6E" stroke-width="1.2"/>
+      <text x="20" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#2F352B">4. Gut-Brain Neuromodulation</text>
+      <text x="20" y="56" font-family="'Inter', sans-serif" font-size="11" fill="#66744E">Evidence-based medications, gut-directed hypnotherapy, and vagus nerve support to dampen hypersensitive visceral pain signals.</text>
+      <text x="20" y="112" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#66744E">&#10003; Neuromodulator Precision</text>
+    </g>
+  </g>
+</svg>

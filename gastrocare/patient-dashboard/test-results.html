@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Results | My GastroCare Patient Portal</title>
+  <meta name="description" content="Diagnostic Test Results - My GastroCare Portal">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg">
+  
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('gastrocare-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      const savedDir = localStorage.getItem('gastrocare-direction') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-wrap">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="d-flex align-items-center justify-content-between mb-4">
+        <a href="../index.html" class="d-block" aria-label="GastroCare Home">
+          <img src="../assets/images/logo/gastrocare-logo.svg" alt="GastroCare" class="gc-brand-logo">
+        </a>
+      </div>
+
+      <div class="sidebar-patient-card mb-4">
+        <div class="d-flex align-items-center gap-3">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--gc-primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.95rem; flex-shrink: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+            AM
+          </div>
+          <div>
+            <strong class="d-block small" style="line-height: 1.2; font-size: 0.92rem;">Alex Morgan</strong>
+            <small style="font-size: 0.76rem;">Patient ID: #GC-8841</small>
+          </div>
+        </div>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li>
+          <a href="dashboard.html" class="sidebar-link">Overview</a>
+        </li>
+        <li>
+          <a href="appointments.html" class="sidebar-link">Appointments</a>
+        </li>
+        <li>
+          <a href="prep-instructions.html" class="sidebar-link">Prep Instructions</a>
+        </li>
+        <li>
+          <a href="test-results.html" class="sidebar-link active">Test Results</a>
+        </li>
+        <li>
+          <a href="medical-history.html" class="sidebar-link">Medical History</a>
+        </li>
+        <li>
+          <a href="documents.html" class="sidebar-link">Documents</a>
+        </li>
+        <li>
+          <a href="profile.html" class="sidebar-link">My Profile</a>
+        </li>
+      </ul>
+
+      <div class="mt-auto pt-3 border-top">
+        <a href="../index.html" class="sidebar-link text-muted small">
+          <span>&#8592;</span> Return to Public Site
+        </a>
+        <a href="../auth/login.html" class="sidebar-link text-danger small">
+          <span>&#128274;</span> Sign Out
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-main">
+      <header class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+        <div class="d-flex align-items-center gap-3">
+          <button type="button" class="btn btn-sm btn-gc-outline d-lg-none" id="sidebarToggleBtn" aria-label="Toggle Navigation Sidebar">
+            &#9776; Menu
+          </button>
+          <div>
+            <a href="../index.html" class="text-decoration-none" style="color: inherit;" title="Return to GastroCare Homepage"><h2 class="h4 mb-0 d-inline-block">MY GASTROCARE</h2></a>
+            <small class="text-muted">Private Patient Health Companion (Fictional / Demo Portal)</small>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <button type="button" class="nav-control-btn theme-toggle-btn" aria-label="Toggle Theme">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+          <button type="button" class="rtl-toggle-btn">RTL</button>
+          <a href="../appointment.html" class="btn btn-sm btn-gc-primary">Book New Visit</a>
+        </div>
+      </header>
+
+      
+  <section class="mb-4 reveal">
+    <h1 class="h3 mb-1">DIAGNOSTIC TEST RESULTS</h1>
+    <p class="text-muted">Two-column medical results viewer. Select any test on the left to inspect detailed clinical findings on the right.</p>
+  </section>
+
+  <section class="mb-4 reveal">
+    <div class="d-flex gap-2">
+      <button class="btn btn-sm btn-gc-primary result-filter-btn active" data-filter="all">All Results (4)</button>
+      <button class="btn btn-sm btn-gc-secondary result-filter-btn" data-filter="Available">Available</button>
+      <button class="btn btn-sm btn-gc-secondary result-filter-btn" data-filter="Reviewed">Reviewed</button>
+      <button class="btn btn-sm btn-gc-secondary result-filter-btn" data-filter="Pending">Pending</button>
+    </div>
+  </section>
+
+  <section class="mb-4 reveal">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div id="resultsListWrap">
+          <div class="results-list-item active" data-result-id="res-1" data-status="Available">
+            <div>
+              <span class="badge-gc badge-available mb-1" style="font-size: 0.7rem; padding: 2px 8px;">Available</span>
+              <strong class="d-block small">Upper Endoscopy &amp; Biopsy</strong>
+              <small class="text-muted">Oct 12, 2026 &bull; Dr. Maya Carter</small>
+            </div>
+            <span class="text-muted">&rarr;</span>
+          </div>
+
+          <div class="results-list-item" data-result-id="res-2" data-status="Reviewed">
+            <div>
+              <span class="badge-gc badge-reviewed mb-1" style="font-size: 0.7rem; padding: 2px 8px;">Reviewed</span>
+              <strong class="d-block small">GI Blood &amp; Celiac Panel</strong>
+              <small class="text-muted">Oct 08, 2026 &bull; Dr. Julian Vance</small>
+            </div>
+            <span class="text-muted">&rarr;</span>
+          </div>
+
+          <div class="results-list-item" data-result-id="res-3" data-status="Reviewed">
+            <div>
+              <span class="badge-gc badge-reviewed mb-1" style="font-size: 0.7rem; padding: 2px 8px;">Reviewed</span>
+              <strong class="d-block small">Fecal Calprotectin Assay</strong>
+              <small class="text-muted">Sep 28, 2026 &bull; Dr. Sophia Chen</small>
+            </div>
+            <span class="text-muted">&rarr;</span>
+          </div>
+
+          <div class="results-list-item" data-result-id="res-4" data-status="Pending">
+            <div>
+              <span class="badge-gc badge-pending mb-1" style="font-size: 0.7rem; padding: 2px 8px;">Pending</span>
+              <strong class="d-block small">Lactulose SIBO Breath Assay</strong>
+              <small class="text-muted">Oct 16, 2026 &bull; In Lab Queue</small>
+            </div>
+            <span class="text-muted">&rarr;</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div id="resultDetailViewer">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-4 reveal">
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <div class="p-4 bg-white rounded border shadow-sm h-100">
+          <h4 class="h5 mb-2 text-dark">Laboratory Methodology &amp; Quality Benchmarks</h4>
+          <p class="small text-muted mb-3">All histopathology biopsies are analyzed by board-certified gastrointestinal pathologists. Tissue sections are reviewed under multiple staining protocols (H&amp;E, Giemsa for Helicobacter, and Alcian blue for intestinal metaplasia).</p>
+          <div class="portal-subcard">
+            <strong class="d-block small text-dark mb-1">Critical Value Notification Protocol</strong>
+            <p class="small text-muted mb-0">Any high-urgency findings (dysplasia, acute mucosal ulceration, or active bleeding indications) trigger immediate telephone notification by the attending physician within 4 hours of specimen signout.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="p-4 bg-white rounded border shadow-sm h-100">
+          <h4 class="h5 mb-3 text-dark">Biomarker Quick Reference</h4>
+          <div class="d-flex flex-column gap-2 small">
+            <div class="d-flex justify-content-between border-bottom pb-1">
+              <span class="text-dark fw-semibold">Fecal Calprotectin:</span>
+              <span class="text-success">&lt; 50 &mu;g/g (Normal)</span>
+            </div>
+            <div class="d-flex justify-content-between border-bottom pb-1">
+              <span class="text-dark fw-semibold">Celiac tTG-IgA:</span>
+              <span class="text-success">&lt; 4.0 U/mL (Negative)</span>
+            </div>
+            <div class="d-flex justify-content-between border-bottom pb-1">
+              <span class="text-dark fw-semibold">H. pylori Antigens:</span>
+              <span class="text-success">Non-Reactive</span>
+            </div>
+            <div class="d-flex justify-content-between pb-1">
+              <span class="text-dark fw-semibold">Ferritin Iron Store:</span>
+              <span class="text-dark">30 - 300 ng/mL</span>
+            </div>
+          </div>
+          <div class="mt-3 pt-2 border-top">
+            <a href="appointments.html" class="btn btn-sm btn-gc-outline w-100">Schedule Results Follow-Up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete Laboratory Records Download Bar -->
+  <section class="mb-4 reveal">
+    <div class="portal-subcard d-flex justify-content-between align-items-center flex-wrap gap-3 p-4">
+      <div>
+        <h5 class="h6 fw-bold mb-1 text-dark">Certified Diagnostic Laboratory Packet (PDF)</h5>
+        <p class="small text-muted mb-0">Contains full digital pathology imaging, pathologist notes, and reference ranges.</p>
+      </div>
+      <div class="d-flex gap-2">
+        <button class="btn btn-sm btn-gc-outline" onclick="window.print()">Print Report View</button>
+        <button class="btn btn-sm btn-gc-primary" onclick="showPortalToast('&#128190; Downloading verified diagnostic packet: GastroCare_Full_Results_2026.pdf...')">&#128190; Download Complete PDF</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-2">
+    <div class="portal-subcard text-center py-3">
+      <small class="text-dark">Questions regarding your findings? Schedule a results consultation with your physician at <strong>(206) 555-0182</strong>.</small>
+    </div>
+  </section>
+
+
+      <div class="gc-disclaimer-box mt-5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <small><strong>Template Demo Notice:</strong> Dashboard records, procedure dates, prep checklists, and laboratory values shown are fictional demonstration data. Patients should always follow actual instructions provided by their treating healthcare team.</small>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/prep.js"></script>
+  <script src="../assets/js/results.js"></script>
+</body>
+</html>

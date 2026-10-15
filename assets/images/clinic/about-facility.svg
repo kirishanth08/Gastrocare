@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 480" width="100%" height="100%" fill="none">
+  <defs>
+    <filter id="shadowAbout" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#2F352B" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="680" height="480" rx="24" fill="#F7F2EB"/>
+  
+  <!-- Clinic Center Floorplan / Illustration -->
+  <g transform="translate(40, 40)" filter="url(#shadowAbout)">
+    <rect width="600" height="400" rx="20" fill="#FFFFFF" stroke="#EEEEEE" stroke-width="2"/>
+    
+    <!-- Header banner inside visual -->
+    <rect width="600" height="70" rx="20" fill="#EAE2D6"/>
+    <text x="30" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="800" fill="#2F352B">GastroCare Center of Digestive Excellence</text>
+    <text x="30" y="58" font-family="'Inter', sans-serif" font-size="11" fill="#66744E">State-of-the-Art Endoscopy Theatres &amp; Recovery Suites</text>
+    
+    <!-- 4 Facility Quadrants -->
+    <!-- Q1: Endoscopy Wing -->
+    <g transform="translate(30, 95)">
+      <rect width="255" height="135" rx="12" fill="#F7F2EB" stroke="#8B9A6E" stroke-width="1.2"/>
+      <circle cx="30" cy="30" r="14" fill="#8B9A6E"/>
+      <path d="M 23 30 L 28 35 L 37 25" stroke="#FFFFFF" stroke-width="2"/>
+      <text x="54" y="34" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#2F352B">Endoscopy &amp; Colonoscopy Suites</text>
+      <text x="20" y="65" font-family="'Inter', sans-serif" font-size="11" fill="#66744E">Equipped with 4K Olympus EVIS X1 endoscopic processors with Narrow Band Imaging (NBI) for high-contrast mucosal visualization.</text>
+      <text x="20" y="115" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#8B9A6E">&#10004; HEPA Filtered &amp; Sterile Recovery</text>
+    </g>
+
+    <!-- Q2: Motility & Breath Lab -->
+    <g transform="translate(315, 95)">
+      <rect width="255" height="135" rx="12" fill="#F7F2EB" stroke="#EEEEEE"/>
+      <circle cx="30" cy="30" r="14" fill="#66744E"/>
+      <text x="24" y="35" font-family="'Inter', sans-serif" font-size="13" fill="#FFFFFF">&#128300;</text>
+      <text x="54" y="34" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#2F352B">Functional GI &amp; SIBO Lab</text>
+      <text x="20" y="65" font-family="'Inter', sans-serif" font-size="11" fill="#66744E">High-resolution esophageal manometry, wireless pH capsule monitoring, and methane-hydrogen lactulose breath assays.</text>
+      <text x="20" y="115" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#66744E">&#10004; Non-Invasive Diagnostic Precision</text>
+    </g>
+
+    <!-- Q3: Patient Recovery Lounges -->
+    <g transform="translate(30, 245)">
+      <rect width="255" height="135" rx="12" fill="#F7F2EB" stroke="#EEEEEE"/>
+      <circle cx="30" cy="30" r="14" fill="#8B9A6E"/>
+      <text x="23" y="35" font-family="'Inter', sans-serif" font-size="13" fill="#FFFFFF">&#128716;</text>
+      <text x="54" y="34" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#2F352B">Private Recovery Suites</text>
+      <text x="20" y="65" font-family="'Inter', sans-serif" font-size="11" fill="#66744E">Individualized quiet post-procedure bays with dedicated nursing care, vital monitors, and warm organic teas upon waking.</text>
+      <text x="20" y="115" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#8B9A6E">&#10004; 1-on-1 Nurse Monitored</text>
+    </g>
+
+    <!-- Q4: Clinical Nutrition & Care Navigators -->
+    <g transform="translate(315, 245)">
+      <rect width="255" height="135" rx="12" fill="#F7F2EB" stroke="#8B9A6E" stroke-width="1.2"/>
+      <circle cx="30" cy="30" r="14" fill="#66744E"/>
+      <text x="24" y="35" font-family="'Inter', sans-serif" font-size="13" fill="#FFFFFF">&#127822;</text>
+      <text x="54" y="34" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#2F352B">Clinical Nutrition &amp; Navigators</text>
+      <text x="20" y="65" font-family="'Inter', sans-serif" font-size="11" fill="#66744E">Dedicated gastro dietitian consultation rooms for low-FODMAP plans, microbiome support, and pre-procedure dietary preparation.</text>
+      <text x="20" y="115" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#8B9A6E">&#10004; Registered GI Dietitians</text>
+    </g>
+  </g>
+</svg>

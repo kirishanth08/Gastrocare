@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book an Appointment Online | GastroCare | GastroCare Clinic</title>
+  <meta name="description" content="Interactive appointment scheduler: choose your procedure, doctor, date slot, and receive instant confirmation pass.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg">
+  
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('gastrocare-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      const savedDir = localStorage.getItem('gastrocare-direction') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- GLOBAL NAVBAR -->
+  <header class="gc-navbar">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="index.html" class="gc-brand" aria-label="GastroCare Clinic Home">
+        <img src="assets/images/logo/gastrocare-logo.svg" alt="GastroCare Clinic Logo" class="gc-brand-logo">
+      </a>
+
+      <nav class="navbar navbar-expand-xl p-0">
+        <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#gcMainNav" aria-controls="gcMainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="gcMainNav">
+          <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="index.html">Home 1 (Clinical Clinic)</a></li>
+                <li><a class="dropdown-item" href="home-2.html">Home 2 (Specialty Center)</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="doctors.html">Doctors</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="patient-dashboard/dashboard.html">Dashboard</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2 nav-controls-group">
+        <button type="button" class="nav-control-btn theme-toggle-btn" aria-label="Toggle Dark Mode" title="Toggle Calm Clinical Night Mode">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+
+        <button type="button" class="rtl-toggle-btn" aria-label="Toggle LTR/RTL" title="Switch text direction">
+          RTL
+        </button>
+
+        <a href="auth/login.html" class="btn btn-sm btn-gc-outline d-none d-sm-inline-flex">
+          Login
+        </a>
+
+        <a href="appointment.html" class="btn btn-sm btn-gc-primary d-none d-sm-inline-flex">
+          Book Appointment
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+<main>
+  <!-- HERO -->
+  <section class="gc-section-padding reveal position-relative overflow-hidden text-center gc-hero-bg gc-hero-appointment">
+    <div class="container max-w-700 mx-auto">
+      <span class="badge-gc mb-3">CONVENIENT SCHEDULING</span>
+      <h1 class="mb-3">BOOK YOUR CLINICAL APPOINTMENT.</h1>
+      <p class="lead text-muted">Complete our 4-step booking process. Fast confirmation, transparent insurance verification, and zero hassle.</p>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE WIZARD SECTION -->
+  <section class="gc-section-padding reveal gc-section-bg-secondary">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <!-- Step Indicators -->
+          <div class="wizard-step-indicator mb-5">
+            <div class="wizard-step-item active" id="stepIndicator1">
+              <div class="wizard-step-num">1</div>
+              <div class="wizard-step-label">Procedure &amp; Doctor</div>
+            </div>
+            <div class="wizard-step-item" id="stepIndicator2">
+              <div class="wizard-step-num">2</div>
+              <div class="wizard-step-label">Date &amp; Time Slot</div>
+            </div>
+            <div class="wizard-step-item" id="stepIndicator3">
+              <div class="wizard-step-num">3</div>
+              <div class="wizard-step-label">Patient Details</div>
+            </div>
+            <div class="wizard-step-item" id="stepIndicator4">
+              <div class="wizard-step-num">4</div>
+              <div class="wizard-step-label">Confirmation Pass</div>
+            </div>
+          </div>
+
+          <div class="p-4 p-md-5 bg-white rounded-4 border shadow-sm">
+            <form id="appointmentWizardForm">
+              <!-- STEP 1: PROCEDURE & DOCTOR -->
+              <div class="wizard-step-panel" id="wizardStep1">
+                <h4 class="mb-3">Step 1: Select Procedure &amp; Specialist</h4>
+                <div class="mb-3">
+                  <label class="form-label">Clinical Service Needed *</label>
+                  <select class="form-select" id="wizardServiceSelect" required>
+                    <option value="" disabled selected>Choose a clinical service...</option>
+                    <option value="Initial GI Consultation">General Gastroenterology Consultation ($275)</option>
+                    <option value="Screening Colonoscopy">Preventative Screening Colonoscopy ($1,450)</option>
+                    <option value="Upper Endoscopy (EGD)">Upper Endoscopy / EGD ($1,150)</option>
+                    <option value="IBS Motility Evaluation">IBS &amp; Motility Evaluation ($275)</option>
+                    <option value="SIBO Breath Test">SIBO Lactulose Breath Testing ($195)</option>
+                  </select>
+                </div>
+
+                <div class="mb-4">
+                  <label class="form-label">Preferred Gastroenterologist *</label>
+                  <select class="form-select" id="wizardDoctorSelect" required>
+                    <option value="" disabled selected>Choose a physician...</option>
+                    <option value="Dr. Maya Carter, MD, FACG">Dr. Maya Carter, MD, FACG (Endoscopy Lead)</option>
+                    <option value="Dr. Julian Vance, MD, PhD">Dr. Julian Vance, MD, PhD (Hepatology Lead)</option>
+                    <option value="Dr. Sophia Chen, MD">Dr. Sophia Chen, MD (IBS &amp; Motility Lead)</option>
+                    <option value="Dr. Aris Thorne, MD">Dr. Aris Thorne, MD (Colorectal Diagnostics)</option>
+                    <option value="Dr. Elena Rostova, MD">Dr. Elena Rostova, MD (IBD Clinical Chair)</option>
+                    <option value="First Available Board Specialist">Any Available Board-Certified Specialist</option>
+                  </select>
+                </div>
+
+                <div class="d-flex justify-content-end">
+                  <button type="button" class="btn btn-gc-primary" id="wizardNextToStep2">Continue to Date &amp; Time &rarr;</button>
+                </div>
+              </div>
+
+              <!-- STEP 2: DATE & TIME SLOT -->
+              <div class="wizard-step-panel d-none" id="wizardStep2">
+                <h4 class="mb-3">Step 2: Select Date &amp; Time Slot</h4>
+                <div class="mb-4">
+                  <label class="form-label">Select Preferred Date *</label>
+                  <input type="date" class="form-control" id="wizardDateInput" required>
+                </div>
+
+                <div class="mb-4">
+                  <label class="form-label d-block">Available Time Slots *</label>
+                  <div class="row g-2">
+                    <div class="col-4 col-md-3">
+                      <button type="button" class="time-slot-btn w-100">8:30 AM</button>
+                    </div>
+                    <div class="col-4 col-md-3">
+                      <button type="button" class="time-slot-btn w-100">9:45 AM</button>
+                    </div>
+                    <div class="col-4 col-md-3">
+                      <button type="button" class="time-slot-btn w-100">11:00 AM</button>
+                    </div>
+                    <div class="col-4 col-md-3">
+                      <button type="button" class="time-slot-btn w-100">1:15 PM</button>
+                    </div>
+                    <div class="col-4 col-md-3">
+                      <button type="button" class="time-slot-btn w-100">2:30 PM</button>
+                    </div>
+                    <div class="col-4 col-md-3">
+                      <button type="button" class="time-slot-btn w-100">3:45 PM</button>
+                    </div>
+                  </div>
+                  <input type="hidden" id="selectedTimeSlot" value="9:45 AM">
+                </div>
+
+                <div class="d-flex justify-content-between">
+                  <button type="button" class="btn btn-gc-secondary" id="wizardBackToStep1">&larr; Back</button>
+                  <button type="button" class="btn btn-gc-primary" id="wizardNextToStep3">Continue to Patient Info &rarr;</button>
+                </div>
+              </div>
+
+              <!-- STEP 3: PATIENT INTAKE FORM -->
+              <div class="wizard-step-panel d-none" id="wizardStep3">
+                <h4 class="mb-3">Step 3: Patient Intake Details</h4>
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <label class="form-label" for="patientFullName">Full Name *</label>
+                    <input type="text" class="form-control" id="patientFullName" name="fullName" required placeholder="Alex Morgan" pattern="^[A-Za-z\s.'-]+$" title="Full name must only contain letters" autocomplete="name">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="patientDob">Date of Birth *</label>
+                    <input type="date" class="form-control" id="patientDob" name="dob" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="patientEmail">Email Address *</label>
+                    <input type="email" class="form-control" id="patientEmail" name="email" required placeholder="alex@example.com" autocomplete="email">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="patientPhone">Phone Number *</label>
+                    <input type="tel" class="form-control" id="patientPhone" name="phone" required placeholder="(206) 555-0182" pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" title="Please enter a valid 10-digit phone number" inputmode="tel" autocomplete="tel">
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="patientInsurance">Primary Health Insurance Provider</label>
+                    <input type="text" class="form-control" id="patientInsurance" name="insurance" placeholder="e.g. BlueCross, Aetna, Medicare, or Self-Pay">
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                  <button type="button" class="btn btn-gc-secondary" id="wizardBackToStep2">&larr; Back</button>
+                  <button type="submit" class="btn btn-gc-primary" id="wizardSubmitBtn">Confirm &amp; Generate Pass &rarr;</button>
+                </div>
+              </div>
+
+              <!-- STEP 4: CONFIRMATION PASS CARD -->
+              <div class="wizard-step-panel d-none text-center" id="wizardStep4">
+                <div class="p-4 bg-light rounded-4 border mb-4 text-start">
+                  <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3">
+                    <div>
+                      <span class="badge bg-success text-white mb-1">APPOINTMENT CONFIRMED</span>
+                      <h4 class="mb-0">GastroCare Clinical Pass</h4>
+                    </div>
+                    <img src="assets/images/logo/favicon.svg" alt="GastroCare" style="width: 38px; height: 38px;">
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-6">
+                      <small class="text-muted d-block">Patient Name</small>
+                      <strong class="" id="passPatientName">Alex Morgan</strong>
+                    </div>
+                    <div class="col-6">
+                      <small class="text-muted d-block">Pass Number</small>
+                      <strong class="text-primary">#GC-PASS-9042</strong>
+                    </div>
+                    <div class="col-6">
+                      <small class="text-muted d-block">Procedure / Service</small>
+                      <strong class="" id="passService">Screening Colonoscopy</strong>
+                    </div>
+                    <div class="col-6">
+                      <small class="text-muted d-block">Physician</small>
+                      <strong class="" id="passDoctor">Dr. Maya Carter, MD, FACG</strong>
+                    </div>
+                    <div class="col-6">
+                      <small class="text-muted d-block">Date &amp; Time Slot</small>
+                      <strong class="" id="passDateTime">Oct 20, 2026 at 9:45 AM</strong>
+                    </div>
+                    <div class="col-6">
+                      <small class="text-muted d-block">Campus Suite</small>
+                      <strong class="">Suite 400, Bellevue Pavilion</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-center gap-3">
+                  <button type="button" class="btn btn-gc-primary" onclick="window.print();">🖨️ Print Clinical Pass</button>
+                  <a href="patient-dashboard/dashboard.html" class="btn btn-gc-outline">Go to Patient Dashboard Demo &rarr;</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  // Set default minimum date to tomorrow
+  const dateInput = document.getElementById('wizardDateInput');
+  if (dateInput) {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    dateInput.min = tomorrow.toISOString().split('T')[0];
+    dateInput.value = dateInput.min;
+  }
+
+  // Step 1 -> Step 2
+  document.getElementById('wizardNextToStep2')?.addEventListener('click', function() {
+    const serv = document.getElementById('wizardServiceSelect');
+    const doc = document.getElementById('wizardDoctorSelect');
+    if (!serv.value || !doc.value) {
+      alert('Please select both a clinical service and a doctor before continuing.');
+      return;
+    }
+    document.getElementById('wizardStep1').classList.add('d-none');
+    document.getElementById('wizardStep2').classList.remove('d-none');
+    document.getElementById('stepIndicator1').classList.remove('active');
+    document.getElementById('stepIndicator1').classList.add('completed');
+    document.getElementById('stepIndicator2').classList.add('active');
+  });
+
+  // Step 2 -> Back to Step 1
+  document.getElementById('wizardBackToStep1')?.addEventListener('click', function() {
+    document.getElementById('wizardStep2').classList.add('d-none');
+    document.getElementById('wizardStep1').classList.remove('d-none');
+    document.getElementById('stepIndicator2').classList.remove('active');
+    document.getElementById('stepIndicator1').classList.add('active');
+  });
+
+  // Step 2 -> Step 3
+  document.getElementById('wizardNextToStep3')?.addEventListener('click', function() {
+    document.getElementById('wizardStep2').classList.add('d-none');
+    document.getElementById('wizardStep3').classList.remove('d-none');
+    document.getElementById('stepIndicator2').classList.remove('active');
+    document.getElementById('stepIndicator2').classList.add('completed');
+    document.getElementById('stepIndicator3').classList.add('active');
+  });
+
+  // Step 3 -> Back to Step 2
+  document.getElementById('wizardBackToStep2')?.addEventListener('click', function() {
+    document.getElementById('wizardStep3').classList.add('d-none');
+    document.getElementById('wizardStep2').classList.remove('d-none');
+    document.getElementById('stepIndicator3').classList.remove('active');
+    document.getElementById('stepIndicator2').classList.add('active');
+  });
+
+  // Form Submit -> Step 4 Confirmation
+  document.getElementById('appointmentWizardForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('patientFullName')?.value || 'Alex Morgan';
+    const serv = document.getElementById('wizardServiceSelect')?.value || 'GI Consultation';
+    const doc = document.getElementById('wizardDoctorSelect')?.value || 'Dr. Maya Carter';
+    const date = document.getElementById('wizardDateInput')?.value || 'Next Available';
+    const time = document.getElementById('selectedTimeSlot')?.value || '9:45 AM';
+
+    document.getElementById('passPatientName').textContent = name;
+    document.getElementById('passService').textContent = serv;
+    document.getElementById('passDoctor').textContent = doc;
+    document.getElementById('passDateTime').textContent = `${date} at ${time}`;
+
+    document.getElementById('wizardStep3').classList.add('d-none');
+    document.getElementById('wizardStep4').classList.remove('d-none');
+    document.getElementById('stepIndicator3').classList.remove('active');
+    document.getElementById('stepIndicator3').classList.add('completed');
+    document.getElementById('stepIndicator4').classList.add('active');
+    document.getElementById('stepIndicator4').classList.add('completed');
+
+    if (window.showGCToast) {
+      window.showGCToast('Appointment successfully booked! Confirmation pass ready.', '✅');
+    }
+  });
+</script>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="gc-footer">
+    <div class="container">
+      <div class="gc-footer-cta-card mb-5">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <span class="badge-gc mb-2">DIGESTIVE HEALTH INSIGHTS</span>
+            <h3 class="mb-2">STAY INFORMED ABOUT YOUR GUT WELLNESS.</h3>
+            <p class="text-muted mb-0">Receive monthly clinical dietary protocols, endoscopy updates, and digestive health research directly from our board leads.</p>
+          </div>
+          <div class="col-lg-6">
+            <form class="gc-newsletter-form">
+              <div class="gc-newsletter-input-group">
+                <div class="gc-input-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <input type="email" class="gc-newsletter-input" placeholder="Enter your email address..." required aria-label="Enter your email address">
+                <button type="submit" class="gc-newsletter-btn">
+                  <span>Subscribe Updates</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </button>
+              </div>
+              <small class="gc-newsletter-hint">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                </svg>
+                <span>We respect your medical privacy. No spam. Unsubscribe anytime.</span>
+              </small>
+            </form>
+          </div>
+        </div>
+      </div>
+
+                  <div class="row g-4 mb-4">
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+          <a href="index.html" class="d-inline-block mb-3">
+            <img src="assets/images/logo/gastrocare-logo.svg" alt="GastroCare Clinic Logo" class="gc-brand-logo">
+          </a>
+          <p class="text-muted pe-lg-4 mb-3">
+            GastroCare is a premier gastroenterology and digestive health center focused on clinical precision, gentle endoscopy procedures, personalized IBS care, and long-term gut wellness.
+          </p>
+          <div class="gc-social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="gc-social-btn" aria-label="LinkedIn" title="Follow GastroCare on LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.39 9.74v-8.37H5.07v8.37h2.78z"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="gc-social-btn" aria-label="Facebook" title="Follow GastroCare on Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="gc-social-btn" aria-label="Instagram" title="Follow GastroCare on Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="gc-social-btn" aria-label="YouTube" title="Watch GastroCare on YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener" class="gc-social-btn" aria-label="X (Twitter)" title="Follow GastroCare on X">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6">
+          <h4 class="gc-footer-title">Navigation</h4>
+          <ul class="gc-footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Clinic</a></li>
+            <li><a href="services.html">All Services</a></li>
+            <li><a href="doctors.html">Doctor Directory</a></li>
+            <li><a href="blog.html">Clinical Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+          <h4 class="gc-footer-title">Specialty Care</h4>
+          <ul class="gc-footer-links">
+            <li><a href="service-details.html">Upper Endoscopy (EGD)</a></li>
+            <li><a href="service-details.html">Colonoscopy Screening</a></li>
+            <li><a href="services.html">Comprehensive GI Care</a></li>
+            <li><a href="services.html">IBS &amp; Motility Program</a></li>
+            <li><a href="appointment.html">Book Online Consultation</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-12">
+          <h4 class="gc-footer-title">Center Location</h4>
+          <ul class="gc-footer-contact list-unstyled">
+            <li>
+              <strong>Campus:</strong>
+              <span>480 Bellevue Pavilion Way, Suite 400, Seattle, WA 98101</span>
+            </li>
+            <li>
+              <strong>Phone:</strong>
+              <span>(206) 555-0182</span>
+            </li>
+            <li>
+              <strong>Emergency:</strong>
+              <span>(206) 555-0199</span>
+            </li>
+            <li>
+              <strong>Email:</strong>
+              <span>care@gastrocare-clinic.com</span>
+            </li>
+            <li>
+              <strong>Hours:</strong>
+              <span>Mon–Fri: 7:30 AM – 6:00 PM<br>Sat: 8:00 AM – 2:00 PM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="gc-footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2 pt-4 border-top">
+        <p class="mb-0 text-muted">&copy; 2026 GastroCare Gastroenterology &amp; Digestive Health Clinic. All rights reserved. &bull; Tagline: <em>“Better Digestion. Better Living.”</em></p>
+        <div class="d-flex gap-3">
+          <a href="#gcLegalModal" data-legal="privacy" role="button">Privacy Policy</a>
+          <a href="#gcLegalModal" data-legal="terms" role="button">Terms of Service</a>
+          <a href="#gcLegalModal" data-legal="accessibility" role="button">Accessibility Statement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to Top">&#8593;</button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/forms.js"></script>
+</body>
+</html>
+

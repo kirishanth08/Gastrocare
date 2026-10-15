@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Specialty Center & Interventional Endoscopy Institute | GastroCare</title>
+  <meta name="description" content="Center of Excellence in Therapeutic Endoscopy, AI-assisted Colonoscopy, Barrett's surveillance, and gentle direct-access GI procedures.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg">
+  
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('gastrocare-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      const savedDir = localStorage.getItem('gastrocare-direction') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- GLOBAL NAVBAR -->
+  <header class="gc-navbar">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="index.html" class="gc-brand" aria-label="GastroCare Clinic Home">
+        <img src="assets/images/logo/gastrocare-logo.svg" alt="GastroCare Clinic Logo" class="gc-brand-logo">
+      </a>
+
+      <nav class="navbar navbar-expand-xl p-0">
+        <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#gcMainNav" aria-controls="gcMainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="gcMainNav">
+          <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="index.html">Home 1 (Clinical Clinic)</a></li>
+                <li><a class="dropdown-item active" href="home-2.html">Home 2 (Specialty Center)</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="doctors.html">Doctors</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="patient-dashboard/dashboard.html">Dashboard</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2 nav-controls-group">
+        <button type="button" class="nav-control-btn theme-toggle-btn" aria-label="Toggle Dark Mode" title="Toggle Calm Clinical Night Mode">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+
+        <button type="button" class="rtl-toggle-btn" aria-label="Toggle LTR/RTL" title="Switch text direction">
+          RTL
+        </button>
+
+        <a href="auth/login.html" class="btn btn-sm btn-gc-outline d-none d-sm-inline-flex">
+          Login
+        </a>
+
+        <a href="appointment.html" class="btn btn-sm btn-gc-primary d-none d-sm-inline-flex">
+          Book Appointment
+        </a>
+      </div>
+    </div>
+  </header>
+
+<main>
+  <!-- SECTION 1: HIGH-IMPACT SPECIALTY CENTER COMMAND HERO -->
+  <section class="h2-hero-section reveal">
+    <div class="container position-relative" style="z-index: 2;">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="h2-status-strip">
+            <span class="h2-status-dot"></span>
+            <span>Olympus EVIS X1 4K Suite Active • Direct Access Triage Open</span>
+          </div>
+
+          <h1 class="h2-hero-headline">
+            ADVANCED ENDOSCOPY &amp; <span class="text-gradient-accent">INTERVENTIONAL GI</span> SPECIALTY CENTER.
+          </h1>
+
+          <p class="h2-hero-desc">
+            An accredited surgical and diagnostic institute uniting artificial intelligence mucosal scanning, certified propofol conscious sedation, and zero-cramp CO2 insufflation. Dedicated to same-week direct-access procedures and complex lesion eradication.
+          </p>
+
+          <div class="h2-hero-actions">
+            <a href="appointment.html" class="btn btn-lg btn-gc-primary">
+              Schedule Direct Endoscopy &rarr;
+            </a>
+            <a href="#specialty-suites" class="btn btn-lg btn-gc-secondary">
+              Explore Procedural Suites
+            </a>
+          </div>
+
+          <div class="h2-stat-row">
+            <div class="h2-stat-box">
+              <h3><span class="counter-val" data-target="99.8" data-suffix="%">99.8%</span></h3>
+              <span>Adenoma Detection Rate</span>
+            </div>
+            <div class="h2-stat-box">
+              <h3><span class="counter-val" data-target="45" data-suffix=" Mins">45 Mins</span></h3>
+              <span>Average Outpatient Stay</span>
+            </div>
+            <div class="h2-stat-box">
+              <h3><span class="counter-val" data-target="0" data-suffix=" Days">0 Days</span></h3>
+              <span>Urgent GI Referral Wait</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="h2-visual-container">
+            <img src="assets/images/hero/hero-bg-interventional.jpg" alt="GastroCare Advanced Interventional Gastroenterology Center" class="img-fluid">
+            
+            <div class="h2-hud-badge-top">
+              <span class="badge-dot" style="background-color: var(--gc-primary); width: 10px; height: 10px;"></span>
+              <div>
+                <strong class="d-block small" style="color: var(--gc-text-dark); line-height: 1.2;">Dual Board-Certified Faculty</strong>
+                <small class="text-muted">Interventional Endoscopy &amp; Hepatology</small>
+              </div>
+            </div>
+
+            <div class="h2-hud-badge-bottom">
+              <div>
+                <strong class="d-block small" style="color: var(--gc-text-dark);">🔬 AI CADe Mucosal Classification</strong>
+                <small class="text-muted">Real-time precancerous polyp detection</small>
+              </div>
+              <span class="badge-gc bg-white text-primary fw-bold">AAAHC Accredited</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Procedure Triage Dock -->
+      <div class="h2-triage-dock">
+        <div class="h2-triage-label">⚡ Fast-Track Procedure Selector — Skip Routine Wait Times:</div>
+        <div class="h2-triage-grid">
+          <a href="#specialty-suites" class="h2-triage-btn" data-jump-tab="tab-upper">
+            <span>🔬</span>
+            <span>Upper Endoscopy (EGD)</span>
+          </a>
+          <a href="#specialty-suites" class="h2-triage-btn" data-jump-tab="tab-colon">
+            <span>🩺</span>
+            <span>Screening Colonoscopy &amp; EMR</span>
+          </a>
+          <a href="#specialty-suites" class="h2-triage-btn" data-jump-tab="tab-motility">
+            <span>📡</span>
+            <span>Bravo Wireless pH &amp; Motility</span>
+          </a>
+          <a href="#specialty-suites" class="h2-triage-btn" data-jump-tab="tab-hepato">
+            <span>🧪</span>
+            <span>FibroScan &amp; Rapid Lab</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: INTERACTIVE SPECIALTY PROCEDURAL SUITES EXPLORER -->
+  <section class="gc-section-padding reveal gc-section-bg-secondary" id="specialty-suites">
+    <div class="container">
+      <div class="text-center gc-section-header max-w-700 mx-auto">
+        <span class="gc-subtitle">PROCEDURAL LEADERSHIP</span>
+        <h2>INTERVENTIONAL DISCIPLINES &amp; CLINICAL SUITES.</h2>
+        <p class="text-muted">Our center is purpose-engineered for high-precision diagnostic and therapeutic gastrointestinal procedures that replace invasive inpatient surgery.</p>
+      </div>
+
+      <!-- Tab Navigation -->
+      <div class="h2-tabs-nav">
+        <button type="button" class="h2-tab-trigger active" data-target-pane="tab-upper">
+          <span>🔬</span> Upper GI &amp; Barrett's
+        </button>
+        <button type="button" class="h2-tab-trigger" data-target-pane="tab-colon">
+          <span>🩺</span> Colorectal &amp; EMR Resection
+        </button>
+        <button type="button" class="h2-tab-trigger" data-target-pane="tab-motility">
+          <span>📡</span> Wireless Telemetry &amp; Motility
+        </button>
+        <button type="button" class="h2-tab-trigger" data-target-pane="tab-hepato">
+          <span>🧪</span> Hepatobiliary &amp; Biomarkers
+        </button>
+      </div>
+
+      <!-- Tab Panes -->
+      <!-- Pane 1: Upper GI -->
+      <div class="h2-tab-pane active" id="tab-upper">
+        <div class="h2-pane-card">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-5">
+              <div class="rounded-4 overflow-hidden shadow-sm">
+                <img src="assets/images/services/service-barretts.jpg" alt="Barrett's Esophagus Radiofrequency Ablation" class="img-fluid w-100 object-fit-cover" style="height: 320px;">
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="h2-spec-chip">Narrow Band Imaging (NBI)</span>
+                <span class="h2-spec-chip">Radiofrequency Ablation</span>
+                <span class="h2-spec-chip">H. Pylori Rapid Assay</span>
+              </div>
+              <h3 class="h4 fw-bold mb-3">High-Definition Upper Endoscopy (EGD) &amp; Barrett's Clearance</h3>
+              <p class="text-muted mb-4">
+                Sub-millimeter optical scrutiny of esophageal and gastric mucosa utilizing Olympus TXI technology. Enables early detection and outpatient ablation of Barrett's dysplasia without open surgical resection.
+              </p>
+              <div class="row g-3 mb-4">
+                <div class="col-sm-6">
+                  <div class="h2-pane-sidebar">
+                    <small class="text-muted d-block fw-bold">SEDATION PROTOCOL</small>
+                    <strong class="d-block text-dark">Propofol MAC (Zero Nausea)</strong>
+                    <small class="text-muted">Awake and alert in 10 minutes</small>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="h2-pane-sidebar">
+                    <small class="text-muted d-block fw-bold">TOTAL APPOINTMENT DURATION</small>
+                    <strong class="d-block text-dark">45 Minutes Outpatient</strong>
+                    <small class="text-muted">Same-day discharge with escort</small>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-wrap gap-3 align-items-center">
+                <a href="appointment.html" class="btn btn-gc-primary">Schedule Upper Endoscopy &rarr;</a>
+                <a href="service-details.html?service=endoscopy" class="btn btn-gc-outline">Read Clinical Protocol</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pane 2: Colorectal & EMR -->
+      <div class="h2-tab-pane" id="tab-colon">
+        <div class="h2-pane-card">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-5">
+              <div class="rounded-4 overflow-hidden shadow-sm">
+                <img src="assets/images/services/service-emr.jpg" alt="Advanced Endoscopic Mucosal Resection" class="img-fluid w-100 object-fit-cover" style="height: 320px;">
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="h2-spec-chip">AI CADe Polyp Detection</span>
+                <span class="h2-spec-chip">Cold Snare Resection</span>
+                <span class="h2-spec-chip">Warm CO2 Insufflation</span>
+              </div>
+              <h3 class="h4 fw-bold mb-3">Therapeutic Colonoscopy &amp; Complex Polypectomy (EMR)</h3>
+              <p class="text-muted mb-4">
+                Achieving a documented 99.8% Adenoma Detection Rate—nearly 4x the national clinical benchmark. Large, flat, and sessile serrated adenomas are safely resected in our outpatient suites, sparing patients from segmental bowel surgery.
+              </p>
+              <div class="row g-3 mb-4">
+                <div class="col-sm-6">
+                  <div class="h2-pane-sidebar">
+                    <small class="text-muted d-block fw-bold">INSUFFLATION MEDIUM</small>
+                    <strong class="d-block text-dark">100% Medical Grade CO2</strong>
+                    <small class="text-muted">Absorbed 150x faster; zero bloating</small>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="h2-pane-sidebar">
+                    <small class="text-muted d-block fw-bold">PREVENTATIVE INSURANCE STATUS</small>
+                    <strong class="d-block text-dark">100% In-Network Covered</strong>
+                    <small class="text-muted">Zero out-of-pocket for eligible adults</small>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-wrap gap-3 align-items-center">
+                <a href="appointment.html" class="btn btn-gc-primary">Book Screening Colonoscopy &rarr;</a>
+                <a href="service-details.html?service=emr" class="btn btn-gc-outline">Read Clinical Protocol</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pane 3: Motility & Bravo -->
+      <div class="h2-tab-pane" id="tab-motility">
+        <div class="h2-pane-card">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-5">
+              <div class="rounded-4 overflow-hidden shadow-sm">
+                <img src="assets/images/services/service-endoscopy.jpg" alt="Bravo Wireless pH Capsule Telemetry" class="img-fluid w-100 object-fit-cover" style="height: 320px;">
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="h2-spec-chip">Catheter-Free Telemetry</span>
+                <span class="h2-spec-chip">48-96 Hr Continuous pH</span>
+                <span class="h2-spec-chip">High-Res Manometry</span>
+              </div>
+              <h3 class="h4 fw-bold mb-3">Esophageal Motility &amp; Bravo™ Wireless pH Telemetry</h3>
+              <p class="text-muted mb-4">
+                Say goodbye to uncomfortable trans-nasal catheters. Our miniature wireless capsule temporarily adheres to the esophageal wall during gentle endoscopy, transmitting acid exposure metrics to a pocket pager while you eat and sleep normally.
+              </p>
+              <div class="row g-3 mb-4">
+                <div class="col-sm-6">
+                  <div class="h2-pane-sidebar">
+                    <small class="text-muted d-block fw-bold">PATIENT TOLERANCE</small>
+                    <strong class="d-block text-dark">100% Catheter-Free</strong>
+                    <small class="text-muted">Capsule detaches &amp; passes naturally</small>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="h2-pane-sidebar">
+                    <small class="text-muted d-block fw-bold">DIAGNOSTIC YIELD</small>
+                    <strong class="d-block text-dark">NERD vs Hypersensitivity</strong>
+                    <small class="text-muted">Definitive answer for refractory reflux</small>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-wrap gap-3 align-items-center">
+                <a href="appointment.html" class="btn btn-gc-primary">Schedule Bravo Telemetry &rarr;</a>
+                <a href="services.html" class="btn btn-gc-outline">View Motility Program</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pane 4: Hepatobiliary & Biomarkers -->
+      <div class="h2-tab-pane" id="tab-hepato">
+        <div class="h2-pane-card">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-5">
+              <div class="rounded-4 overflow-hidden shadow-sm">
+                <img src="assets/images/services/service-sibo.jpg" alt="Quintron Breath Lab and Biomarker Testing" class="img-fluid w-100 object-fit-cover" style="height: 320px;">
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="h2-spec-chip">FibroScan® Elastography</span>
+                <span class="h2-spec-chip">Multi-Gas SIBO Breath</span>
+                <span class="h2-spec-chip">Fecal Calprotectin 24-Hr</span>
+              </div>
+              <h3 class="h4 fw-bold mb-3">Non-Invasive Hepatobiliary Triage &amp; Rapid Biomarkers</h3>
+              <p class="text-muted mb-4">
+                Zero incisions, zero radiation. Non-invasive ultrasound shear wave elastography precisely quantifies liver fibrosis and hepatic steatosis in 10 minutes, alongside Quintron multi-gas breath analytics for small intestinal bacterial overgrowth.
+              </p>
+              <div class="row g-3 mb-4">
+                <div class="col-sm-6">
+                  <div class="h2-pane-sidebar">
+                    <small class="text-muted d-block fw-bold">PROCEDURE INVASIVENESS</small>
+                    <strong class="d-block text-dark">Completely Non-Invasive</strong>
+                    <small class="text-muted">No needles, no sedation required</small>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="h2-pane-sidebar">
+                    <small class="text-muted d-block fw-bold">REPORT TURNAROUND</small>
+                    <strong class="d-block text-dark">Instant Digital Sync</strong>
+                    <small class="text-muted">Available in Patient Portal same-day</small>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-wrap gap-3 align-items-center">
+                <a href="appointment.html" class="btn btn-gc-primary">Book Biomarker Workup &rarr;</a>
+                <a href="services.html" class="btn btn-gc-outline">All Diagnostic Services</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: SPECIALTY CENTER VS TRADITIONAL HOSPITAL COMPARISON MATRIX -->
+  <section class="gc-section-padding reveal" style="background-color: var(--gc-bg-main);">
+    <div class="container">
+      <div class="text-center gc-section-header max-w-700 mx-auto">
+        <span class="gc-subtitle">THE GASTROCARE ADVANTAGE</span>
+        <h2>WHY AN AMBULATORY SPECIALTY CENTER BEATS A HOSPITAL.</h2>
+        <p class="text-muted">A dedicated outpatient interventional institute delivers superior safety metrics, personalized nursing ratios, and an anxiety-free environment.</p>
+      </div>
+
+      <div class="h2-matrix-wrap">
+        <div class="h2-matrix-row h2-matrix-header">
+          <div>Clinical Metric</div>
+          <div>Traditional Hospital Outpatient</div>
+          <div>GastroCare Specialty Center</div>
+        </div>
+
+        <div class="h2-matrix-row">
+          <div><strong class="d-block">Appointment Scheduling</strong><small class="text-muted">Wait time for screening</small></div>
+          <div><span class="h2-pill-disadvantage">⏳ 4 to 8 Weeks Wait</span><p class="small text-muted mb-0 mt-1">Stuck in multi-tiered hospital bureaucratic queues.</p></div>
+          <div><span class="h2-pill-advantage">⚡ 24 to 72 Hours Guaranteed</span><p class="small text-muted mb-0 mt-1">Direct-access fast-track scheduling.</p></div>
+        </div>
+
+        <div class="h2-matrix-row">
+          <div><strong class="d-block">Post-Procedure Bloating</strong><small class="text-muted">Insufflation gas medium</small></div>
+          <div><span class="h2-pill-disadvantage">💨 Ambient Room Air</span><p class="small text-muted mb-0 mt-1">Causes severe post-procedural cramping &amp; distension.</p></div>
+          <div><span class="h2-pill-advantage">🌿 Pure Medical CO2</span><p class="small text-muted mb-0 mt-1">Absorbed 150x faster; virtually zero discomfort.</p></div>
+        </div>
+
+        <div class="h2-matrix-row">
+          <div><strong class="d-block">Sedation &amp; Recovery</strong><small class="text-muted">Anesthesia protocol</small></div>
+          <div><span class="h2-pill-disadvantage">😴 Narcotic Conscious Sedation</span><p class="small text-muted mb-0 mt-1">Lingering dizziness, nausea, and 3+ hour grogginess.</p></div>
+          <div><span class="h2-pill-advantage">✨ Propofol MAC Sedation</span><p class="small text-muted mb-0 mt-1">Instant gentle awakening; clear-headed in 10 minutes.</p></div>
+        </div>
+
+        <div class="h2-matrix-row">
+          <div><strong class="d-block">Adenoma Detection Rate (ADR)</strong><small class="text-muted">Precancerous polyp capture</small></div>
+          <div><span class="h2-pill-disadvantage">📊 25% National Average</span><p class="small text-muted mb-0 mt-1">Standard white-light resolution scopes.</p></div>
+          <div><span class="h2-pill-advantage">🎯 99.8% AI-Assisted ADR</span><p class="small text-muted mb-0 mt-1">Olympus EVIS X1 4K HDR + real-time CADe scanning.</p></div>
+        </div>
+
+        <div class="h2-matrix-row">
+          <div><strong class="d-block">Pricing &amp; Facility Fees</strong><small class="text-muted">Billing clarity</small></div>
+          <div><span class="h2-pill-disadvantage">💸 Hidden Hospital Surcharges</span><p class="small text-muted mb-0 mt-1">Unforeseen separate bills for recovery, facility &amp; supplies.</p></div>
+          <div><span class="h2-pill-advantage">💎 100% Bundled Transparency</span><p class="small text-muted mb-0 mt-1">All-inclusive published bundles &amp; in-network parity.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: DIRECT-ACCESS ENDOSCOPY PATHWAY (SKIP THE OFFICE VISIT) -->
+  <section class="gc-section-padding reveal gc-section-bg-secondary">
+    <div class="container">
+      <div class="text-center gc-section-header max-w-700 mx-auto">
+        <span class="gc-subtitle">ZERO-FRICTION CARE</span>
+        <h2>DIRECT-ACCESS ENDOSCOPY PATHWAY.</h2>
+        <p class="text-muted">Healthy screening patients can skip the preliminary office consultation and co-pay, going directly from digital triage to procedure day.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="h2-step-card">
+            <div class="h2-step-num">01</div>
+            <h4 class="h5 fw-bold mb-2">Digital Health Triage</h4>
+            <p class="small text-muted mb-3">Complete our confidential 5-minute health history questionnaire online. Our clinical team reviews medications and confirms procedure eligibility within 4 hours.</p>
+            <span class="badge-gc bg-white text-muted small mt-auto align-self-start">100% Online</span>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="h2-step-card">
+            <div class="h2-step-num">02</div>
+            <h4 class="h5 fw-bold mb-2">Gentle Prep Kit Shipped</h4>
+            <p class="small text-muted mb-3">Receive your personalized low-volume split-dose bowel prep kit directly to your doorstep with clear, color-coded step-by-step instructions and nursing SMS check-ins.</p>
+            <span class="badge-gc bg-white text-muted small mt-auto align-self-start">Low-Volume Formula</span>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="h2-step-card">
+            <div class="h2-step-num">03</div>
+            <h4 class="h5 fw-bold mb-2">Private Day Suite</h4>
+            <p class="small text-muted mb-3">Arrive at our calm center. Settle into a private recovery pod with heated blankets, certified anesthesia propofol administration, and high-definition scope imaging.</p>
+            <span class="badge-gc bg-white text-muted small mt-auto align-self-start">Total Comfort</span>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="h2-step-card">
+            <div class="h2-step-num">04</div>
+            <h4 class="h5 fw-bold mb-2">Digital Photo Debrief</h4>
+            <p class="small text-muted mb-3">Before you leave, your specialist provides an immediate bedside photo briefing of your findings. High-res images and preliminary reports sync instantly to your portal.</p>
+            <span class="badge-gc bg-white text-muted small mt-auto align-self-start">Same-Day Results</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="appointment.html" class="btn btn-lg btn-gc-primary">Check Direct-Access Eligibility &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: INTERACTIVE PROCEDURE PRICING & INSURANCE CALCULATOR -->
+  <section class="gc-section-padding reveal" style="background-color: var(--gc-bg-main);" id="pricing-estimator">
+    <div class="container">
+      <div class="text-center gc-section-header max-w-700 mx-auto">
+        <span class="gc-subtitle">NO SURPRISE MEDICAL BILLS</span>
+        <h2>PROCEDURE PRICING &amp; INSURANCE ESTIMATOR.</h2>
+        <p class="text-muted">Select your procedure and coverage type to view clear, transparent out-of-pocket estimates.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="h2-calc-box">
+            <div class="row g-4">
+              <!-- Left Column: Inputs -->
+              <div class="col-lg-6">
+                <label class="form-label fw-bold mb-2">1. Select Payment Method:</label>
+                <div class="h2-calc-toggle">
+                  <button type="button" class="h2-calc-toggle-btn active" data-mode="insurance">
+                    Commercial Insurance
+                  </button>
+                  <button type="button" class="h2-calc-toggle-btn" data-mode="selfpay">
+                    Self-Pay Bundled Rate
+                  </button>
+                </div>
+
+                <label class="form-label fw-bold mb-2">2. Select Procedure Suite:</label>
+                <div class="h2-proc-option selected" data-selfpay="1450" data-copay="0" data-proc-name="Screening Colonoscopy">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <strong class="d-block text-dark">Screening Colonoscopy (Preventative)</strong>
+                      <small class="text-muted">Includes Propofol sedation, facility fee &amp; polyp removal</small>
+                    </div>
+                    <span class="badge-gc bg-white text-primary fw-bold">Popular</span>
+                  </div>
+                </div>
+
+                <div class="h2-proc-option" data-selfpay="1150" data-copay="75" data-proc-name="Upper Endoscopy (EGD)">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <strong class="d-block text-dark">Diagnostic Upper Endoscopy (EGD)</strong>
+                      <small class="text-muted">Esophagus &amp; stomach mucosal imaging + biopsy</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="h2-proc-option" data-selfpay="2250" data-copay="125" data-proc-name="Combined EGD + Colonoscopy">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <strong class="d-block text-dark">Dual EGD + Colonoscopy Combo Suite</strong>
+                      <small class="text-muted">Complete upper and lower tract evaluation in one visit</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="h2-proc-option" data-selfpay="950" data-copay="50" data-proc-name="Bravo Wireless pH Study">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <strong class="d-block text-dark">Bravo™ 48-Hour Wireless pH Telemetry</strong>
+                      <small class="text-muted">Catheter-free reflux monitoring with digital receiver</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: Live Price Card -->
+              <div class="col-lg-6">
+                <div class="p-4 rounded-4 border h-100 d-flex flex-column" style="background-color: var(--gc-bg-main);">
+                  <span class="badge-gc mb-2 align-self-start">ESTIMATED OUT-OF-POCKET</span>
+                  <div class="h2-price-display my-2" id="calcPriceDisplay">$0</div>
+                  <p class="small text-muted mb-3" id="calcSubtext">Typical Copay with In-Network Commercial Insurance (100% Preventative Coverage)</p>
+                  
+                  <ul class="list-unstyled small mb-4" id="calcBreakdownList">
+                    <!-- Populated dynamically via JS -->
+                  </ul>
+
+                  <div class="p-3 rounded-3 border bg-white mb-4 small" id="calcCoverageNotice">
+                    🛡️ <strong>In-Network Coverage:</strong> We bill Aetna, BlueCross, Cigna, Medicare, and UnitedHealthcare directly with zero surprise facility markups.
+                  </div>
+
+                  <a href="appointment.html" class="btn btn-lg btn-gc-primary mt-auto w-100">
+                    Book Procedure with This Estimate &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: HIGH-TECH OPTICAL & SURGICAL INNOVATIONS -->
+  <section class="gc-section-padding reveal gc-section-bg-secondary">
+    <div class="container">
+      <div class="text-center gc-section-header max-w-700 mx-auto">
+        <span class="gc-subtitle">EQUIPMENT &amp; STANDARDS</span>
+        <h2>ENGINEERED FOR PATIENT TRANQUILITY &amp; OPTICAL CLARITY.</h2>
+        <p class="text-muted">Every piece of endoscopic hardware in our suites is curated to minimize discomfort while maximizing early neoplastic detection.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="h2-tech-card">
+            <div class="h2-tech-icon">🔬</div>
+            <h4 class="h5 fw-bold mb-2">Olympus EVIS X1 4K</h4>
+            <p class="small text-muted mb-0">Featuring Texture and Color Enhancement Imaging (TXI) and Red Dichromatic Imaging (RDI) for instant visualization of hidden mucosal pathology.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="h2-tech-card">
+            <div class="h2-tech-icon">🧠</div>
+            <h4 class="h5 fw-bold mb-2">AI-Powered CADe Scan</h4>
+            <p class="small text-muted mb-0">Deep learning artificial intelligence algorithm runs concurrently with endoscopy video feed to highlight polyps in real time, yielding a 99.8% ADR.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="h2-tech-card">
+            <div class="h2-tech-icon">💨</div>
+            <h4 class="h5 fw-bold mb-2">CO2 Warm Insufflator</h4>
+            <p class="small text-muted mb-0">Medical-grade carbon dioxide eliminates post-colonoscopy bloating because CO2 is absorbed through bowel tissue 150 times faster than room air.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="h2-tech-card">
+            <div class="h2-tech-icon">🩺</div>
+            <h4 class="h5 fw-bold mb-2">Propofol MAC Anesthesia</h4>
+            <p class="small text-muted mb-0">Administered by certified nurse anesthetists. Patients experience tranquil, dreamless sleep and wake up clear-headed in 10 minutes with zero nausea.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SECTION 8: REFERRING PHYSICIAN DIRECT TRIAGE PORTAL -->
+  <section class="gc-section-padding reveal gc-section-bg-secondary">
+    <div class="container">
+      <div class="h2-physician-card">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <span class="badge-gc mb-2">HEALTHCARE PROVIDER NETWORK</span>
+            <h3 class="h3 fw-bold mb-2">FOR REFERRING PHYSICIANS &amp; CLINICAL PRACTICES.</h3>
+            <p class="text-muted mb-4">
+              We partner closely with primary care providers, internal medicine groups, and urgent care clinics across the Pacific Northwest to guarantee rapid endoscopic triage.
+            </p>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-2">
+                  <span class="badge-dot" style="background-color: var(--gc-primary);"></span>
+                  <span class="small fw-semibold">24-Hour Urgent Procedure Guarantee</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-2">
+                  <span class="badge-dot" style="background-color: var(--gc-primary);"></span>
+                  <span class="small fw-semibold">Electronic EHR &amp; DICOM Sync</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-2">
+                  <span class="badge-dot" style="background-color: var(--gc-primary);"></span>
+                  <span class="small fw-semibold">Direct Doctor-to-Doctor Phone Line</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-2">
+                  <span class="badge-dot" style="background-color: var(--gc-primary);"></span>
+                  <span class="small fw-semibold">Pre-Authorization Coordination</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 text-lg-end">
+            <div class="p-4 rounded-4 bg-white border shadow-sm text-start">
+              <h5 class="fw-bold mb-2">Urgent Referral Hotline</h5>
+              <p class="small text-muted mb-3">Speak directly with Dr. Maya Carter or our triage coordinator:</p>
+              <a href="tel:2065550182" class="d-block h4 text-primary fw-bold text-decoration-none mb-3">📞 (206) 555-0182</a>
+              <a href="contact.html" class="btn btn-gc-primary w-100">Submit Digital Referral Form</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9: PROCEDURE PREPARATION & RECOVERY FAQ -->
+  <section class="gc-section-padding reveal" style="background-color: var(--gc-bg-main);">
+    <div class="container">
+      <div class="text-center gc-section-header max-w-700 mx-auto">
+        <span class="gc-subtitle">CLEAR CLINICAL ANSWERS</span>
+        <h2>ENDOSCOPY PREPARATION &amp; SAFETY FAQ.</h2>
+        <p class="text-muted">Everything you need to know about preparing for your procedure, conscious sedation safety, and same-day recovery.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="accordion" id="h2FaqAccordion">
+            <!-- FAQ 1 -->
+            <div class="accordion-item mb-3 border rounded-3 overflow-hidden shadow-sm">
+              <h3 class="accordion-header" id="faqHeading1">
+                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                  Will I feel any pain or remember the procedure?
+                </button>
+              </h3>
+              <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#h2FaqAccordion">
+                <div class="accordion-body text-muted">
+                  No. We utilize certified Monitored Anesthesia Care (MAC) with ultra-pure Propofol administered by licensed anesthesia providers. You will drift into a peaceful sleep within seconds, breathe comfortably on your own, and wake up 10 minutes after completion with zero procedural memory and no grogginess.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item mb-3 border rounded-3 overflow-hidden shadow-sm">
+              <h3 class="accordion-header" id="faqHeading2">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                  Why do you use CO2 instead of ambient room air?
+                </button>
+              </h3>
+              <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#h2FaqAccordion">
+                <div class="accordion-body text-muted">
+                  Traditional hospitals often use ambient room air to inflate the colon, which can trap nitrogen gas and cause painful abdominal distension and cramps for hours afterward. GastroCare uses warm medical-grade carbon dioxide (CO2), which is naturally absorbed through tissue 150 times faster than air, virtually eliminating post-procedure gas and discomfort.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item mb-3 border rounded-3 overflow-hidden shadow-sm">
+              <h3 class="accordion-header" id="faqHeading3">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                  How does the "Direct-Access" program work?
+                </button>
+              </h3>
+              <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#h2FaqAccordion">
+                <div class="accordion-body text-muted">
+                  If you are 45 or older (or have a family history of colon polyps) and are otherwise generally healthy without severe cardiac or renal disease, you can complete our online triage assessment. Our medical leads verify your eligibility, and you proceed straight to your scheduled colonoscopy without taking time off for an initial office visit.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item mb-3 border rounded-3 overflow-hidden shadow-sm">
+              <h3 class="accordion-header" id="faqHeading4">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                  How soon will I receive my biopsy and pathology results?
+                </button>
+              </h3>
+              <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#h2FaqAccordion">
+                <div class="accordion-body text-muted">
+                  Immediately following your procedure, your gastroenterologist provides a color photo discharge report detailing whether any polyps were detected and removed. If tissue biopsies were collected, formal histological pathology is processed by our dedicated dermatopathology &amp; GI lab and securely uploaded to your Patient Portal within 3 to 5 business days.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="accordion-item border rounded-3 overflow-hidden shadow-sm">
+              <h3 class="accordion-header" id="faqHeading5">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                  Do I need an adult companion to drive me home?
+                </button>
+              </h3>
+              <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#h2FaqAccordion">
+                <div class="accordion-body text-muted">
+                  Yes. Because you receive intravenous propofol sedation, state healthcare regulations require a responsible adult companion (friend, family member, or medical transport) to accompany you home. You are free to resume normal eating, gentle walking, and routine activities the very same day.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 10: HIGH-IMPACT URGENT SCHEDULING ACTION BANNER -->
+  <section class="gc-section-padding reveal gc-section-bg-secondary">
+    <div class="container text-center">
+      <div class="max-w-700 mx-auto">
+        <span class="badge-gc mb-3">CONVENIENT OUTPATIENT SCHEDULING</span>
+        <h2 class="h1 fw-bold mb-3">TAKE CHARGE OF YOUR GASTROINTESTINAL HEALTH TODAY.</h2>
+        <p class="lead text-muted mb-4">
+          Experience state-of-the-art therapeutic endoscopy, humane sedation, and rapid triage in a tranquil, outpatient environment.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="appointment.html" class="btn btn-lg btn-gc-primary">
+            Schedule Procedure Online &rarr;
+          </a>
+          <a href="contact.html" class="btn btn-lg btn-gc-secondary">
+            Call Procedure Desk: (206) 555-0182
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="gc-footer">
+    <div class="container">
+      <div class="gc-footer-cta-card mb-5">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <span class="badge-gc mb-2">DIGESTIVE HEALTH INSIGHTS</span>
+            <h3 class="mb-2">STAY INFORMED ABOUT YOUR GUT WELLNESS.</h3>
+            <p class="text-muted mb-0">Receive monthly clinical dietary protocols, endoscopy updates, and digestive health research directly from our board leads.</p>
+          </div>
+          <div class="col-lg-6">
+            <form class="gc-newsletter-form">
+              <div class="gc-newsletter-input-group">
+                <div class="gc-input-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <input type="email" class="gc-newsletter-input" placeholder="Enter your email address..." required aria-label="Enter your email address">
+                <button type="submit" class="gc-newsletter-btn">
+                  <span>Subscribe Updates</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </button>
+              </div>
+              <small class="gc-newsletter-hint">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                </svg>
+                <span>We respect your medical privacy. No spam. Unsubscribe anytime.</span>
+              </small>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-4">
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+          <a href="index.html" class="d-inline-block mb-3">
+            <img src="assets/images/logo/gastrocare-logo.svg" alt="GastroCare Clinic Logo" class="gc-brand-logo">
+          </a>
+          <p class="text-muted pe-lg-4 mb-3">
+            GastroCare is a premier gastroenterology and digestive health center focused on clinical precision, gentle endoscopy procedures, personalized IBS care, and long-term gut wellness.
+          </p>
+          <div class="gc-social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="gc-social-btn" aria-label="LinkedIn" title="Follow GastroCare on LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.39 9.74v-8.37H5.07v8.37h2.78z"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="gc-social-btn" aria-label="Facebook" title="Follow GastroCare on Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="gc-social-btn" aria-label="Instagram" title="Follow GastroCare on Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="gc-social-btn" aria-label="YouTube" title="Watch GastroCare on YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener" class="gc-social-btn" aria-label="X (Twitter)" title="Follow GastroCare on X">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6">
+          <h4 class="gc-footer-title">Navigation</h4>
+          <ul class="gc-footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Clinic</a></li>
+            <li><a href="services.html">All Services</a></li>
+            <li><a href="doctors.html">Doctor Directory</a></li>
+            <li><a href="blog.html">Clinical Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+          <h4 class="gc-footer-title">Specialty Care</h4>
+          <ul class="gc-footer-links">
+            <li><a href="service-details.html?service=endoscopy">Upper Endoscopy (EGD)</a></li>
+            <li><a href="service-details.html?service=colonoscopy">Colonoscopy Screening</a></li>
+            <li><a href="services.html">Comprehensive GI Care</a></li>
+            <li><a href="services.html">IBS &amp; Motility Program</a></li>
+            <li><a href="appointment.html">Book Online Consultation</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-12">
+          <h4 class="gc-footer-title">Center Location</h4>
+          <ul class="gc-footer-contact list-unstyled">
+            <li>
+              <strong>Campus:</strong>
+              <span>480 Bellevue Pavilion Way, Suite 400, Seattle, WA 98101</span>
+            </li>
+            <li>
+              <strong>Phone:</strong>
+              <span>(206) 555-0182</span>
+            </li>
+            <li>
+              <strong>Emergency:</strong>
+              <span>(206) 555-0199</span>
+            </li>
+            <li>
+              <strong>Email:</strong>
+              <span>care@gastrocare-clinic.com</span>
+            </li>
+            <li>
+              <strong>Hours:</strong>
+              <span>Mon–Fri: 7:30 AM – 6:00 PM<br>Sat: 8:00 AM – 2:00 PM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="gc-footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2 pt-4 border-top">
+        <p class="mb-0 text-muted">&copy; 2026 GastroCare Gastroenterology &amp; Digestive Health Clinic. All rights reserved. &bull; Tagline: <em>“Better Digestion. Better Living.”</em></p>
+        <div class="d-flex gap-3">
+          <a href="#gcLegalModal" data-legal="privacy" role="button">Privacy Policy</a>
+          <a href="#gcLegalModal" data-legal="terms" role="button">Terms of Service</a>
+          <a href="#gcLegalModal" data-legal="accessibility" role="button">Accessibility Statement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to Top">&#8593;</button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/forms.js"></script>
+</body>
+</html>

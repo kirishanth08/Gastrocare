@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Result Details | My GastroCare Patient Portal</title>
+  <meta name="description" content="Comprehensive Diagnostic Result Details - My GastroCare Portal">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg">
+  
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('gastrocare-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      const savedDir = localStorage.getItem('gastrocare-direction') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-wrap">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="d-flex align-items-center justify-content-between mb-4">
+        <a href="../index.html" class="d-block" aria-label="GastroCare Home">
+          <img src="../assets/images/logo/gastrocare-logo.svg" alt="GastroCare" class="gc-brand-logo">
+        </a>
+      </div>
+
+      <div class="p-3 bg-secondary rounded border mb-3">
+        <div class="d-flex align-items-center gap-2">
+          <div style="width: 38px; height: 38px; border-radius: 50%; background-color: var(--gc-primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: bold;">
+            AM
+          </div>
+          <div>
+            <strong class="d-block small" style="line-height: 1.2;">Alex Morgan</strong>
+            <small class="text-muted" style="font-size: 0.75rem;">Patient ID: #GC-8841</small>
+          </div>
+        </div>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li>
+          <a href="dashboard.html" class="sidebar-link">Overview</a>
+        </li>
+        <li>
+          <a href="appointments.html" class="sidebar-link">Appointments</a>
+        </li>
+        <li>
+          <a href="prep-instructions.html" class="sidebar-link">Prep Instructions</a>
+        </li>
+        <li>
+          <a href="test-results.html" class="sidebar-link active">Test Results</a>
+        </li>
+        <li>
+          <a href="medical-history.html" class="sidebar-link">Medical History</a>
+        </li>
+        <li>
+          <a href="documents.html" class="sidebar-link">Documents</a>
+        </li>
+        <li>
+          <a href="profile.html" class="sidebar-link">My Profile</a>
+        </li>
+      </ul>
+
+      <div class="mt-auto pt-3 border-top">
+        <a href="../index.html" class="sidebar-link text-muted small">
+          <span>&#8592;</span> Return to Public Site
+        </a>
+        <a href="../auth/login.html" class="sidebar-link text-danger small">
+          <span>&#128274;</span> Sign Out
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-main">
+      <header class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+        <div class="d-flex align-items-center gap-3">
+          <button type="button" class="btn btn-sm btn-gc-outline d-lg-none" id="sidebarToggleBtn" aria-label="Toggle Navigation Sidebar">
+            &#9776; Menu
+          </button>
+          <div>
+            <a href="../index.html" class="text-decoration-none" style="color: inherit;" title="Return to GastroCare Homepage"><h2 class="h4 mb-0 d-inline-block">MY GASTROCARE</h2></a>
+            <small class="text-muted">Private Patient Health Companion (Fictional / Demo Portal)</small>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <button type="button" class="nav-control-btn theme-toggle-btn" aria-label="Toggle Theme">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+          <button type="button" class="rtl-toggle-btn">RTL</button>
+          <a href="../appointment.html" class="btn btn-sm btn-gc-primary">Book New Visit</a>
+        </div>
+      </header>
+
+      
+  <section class="mb-4 reveal">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <div>
+        <a href="test-results.html" class="small fw-bold">&larr; Back to Results Directory</a>
+        <h1 class="h3 mt-1 mb-0">ENDOSCOPY PATHOLOGY REPORT #PATH-2026-991</h1>
+      </div>
+      <button class="btn btn-sm btn-gc-outline" onclick="window.print()">Print Official Report</button>
+    </div>
+  </section>
+
+  <section class="mb-4 reveal">
+    <div class="p-4 p-md-5 bg-white rounded border shadow-sm">
+      <div class="d-flex justify-content-between align-items-start border-bottom pb-3 mb-4 flex-wrap gap-2">
+        <div>
+          <h4 class="mb-1">Diagnostic Upper Endoscopy &amp; Mucosal Histology</h4>
+          <small class="text-muted">Patient: <strong>Alex Morgan (DOB: 11/14/1986)</strong> &bull; Ordering Physician: <strong>Dr. Maya Carter, MD, FACG</strong></small>
+        </div>
+        <span class="badge-gc badge-available">STATUS: VERIFIED &amp; REVIEWED</span>
+      </div>
+
+      <div class="row g-4 mb-4">
+        <div class="col-md-4">
+          <div class="p-3 bg-secondary rounded border">
+            <small class="text-muted d-block">Procedure Date:</small>
+            <strong class="">October 12, 2026</strong>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-3 bg-secondary rounded border">
+            <small class="text-muted d-block">Pathologist:</small>
+            <strong class="">Dr. Karen Vance, MD (GI Pathology)</strong>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-3 bg-secondary rounded border">
+            <small class="text-muted d-block">Sedation Agent:</small>
+            <strong class="">Monitored Propofol (140mg)</strong>
+          </div>
+        </div>
+      </div>
+
+      <h5 class="mb-2">Gross Endoscopic Findings</h5>
+      <p class="text-muted">Inspection of the esophagus revealed regular squamous mucosa. Z-line noted at 38cm from incisors without mucosal breaks or columnar metaplasia. Stomach revealed normal body and fundus; mild patchy erythema noted along the antral mucosa. Duodenal bulb and D2 demonstrated normal circular folds without scalloping.</p>
+
+      <h5 class="mt-4 mb-2">Microscopic Histopathology &amp; Biopsy Analysis</h5>
+      <div class="table-responsive bg-light rounded border p-3 mb-4">
+        <table class="table table-bordered mb-0 small">
+          <thead>
+            <tr>
+              <th>Specimen Site</th>
+              <th>Microscopic Description</th>
+              <th>Clinical Interpretation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A. Esophagus (Distal)</td>
+              <td>Stratified squamous epithelium without eosinophils or dysplasia.</td>
+              <td><strong class="text-success">Normal esophageal mucosa</strong></td>
+            </tr>
+            <tr>
+              <td>B. Gastric Antrum</td>
+              <td>Mild chronic superficial gastritis. Giemsa stain negative for H. pylori.</td>
+              <td><strong class="text-success">Negative for H. pylori</strong></td>
+            </tr>
+            <tr>
+              <td>C. Duodenum (Bulb &amp; D2)</td>
+              <td>Normal villus-to-crypt ratio (3:1). Intraepithelial lymphocytes &lt; 20/100 enterocytes.</td>
+              <td><strong class="text-success">Negative for Celiac Sprue (Marsh 0)</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h5 class="mt-4 mb-2">Physician Debrief &amp; Follow-up Recommendations</h5>
+      <div class="p-3 bg-secondary rounded border">
+        <p class="mb-0 text-dark small">
+          Findings exclude active ulceration, celiac enteropathy, and H. pylori infection. Antral erythema is consistent with mild reactive gastritis, likely exacerbated by episodic NSAID use. Continue prescribed acid suppression regimen (Omeprazole 20mg daily) for 4 weeks. Transition to PRN famotidine as discussed. Routine follow-up in 12 months.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-4 reveal">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="p-4 bg-white rounded border h-100">
+          <h5>Physician Follow-Up Schedule</h5>
+          <p class="small text-muted mb-0">Follow-up appointment booked for Dr. Maya Carter to review long-term acid suppression transition. Check-in via telehealth video available.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-4 bg-white rounded border h-100">
+          <h5>Medication Interaction Advisory</h5>
+          <p class="small text-muted mb-0">Please avoid over-the-counter ibuprofen, naproxen, and aspirin while gastric antral mucosal lining completes healing over the next 4 weeks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-4 reveal">
+    <div class="p-4 bg-secondary rounded border text-center">
+      <h5>Need a Physical Signed Copy for Referral?</h5>
+      <p class="small text-muted mb-3">Our medical records team can fax or mail official signed pathology certificates to your primary care physician.</p>
+      <a href="documents.html" class="btn btn-sm btn-gc-outline">Request Records Transfer</a>
+    </div>
+  </section>
+
+  <section class="mb-2">
+    <div class="p-3 bg-light rounded border text-center">
+      <small class="text-muted">Demonstration Medical Report &bull; Fictional Patient Records &bull; GastroCare Diagnostic Core</small>
+    </div>
+  </section>
+
+
+      <div class="gc-disclaimer-box mt-5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <small><strong>Template Demo Notice:</strong> Dashboard records, procedure dates, prep checklists, and laboratory values shown are fictional demonstration data. Patients should always follow actual instructions provided by their treating healthcare team.</small>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/prep.js"></script>
+  <script src="../assets/js/results.js"></script>
+</body>
+</html>

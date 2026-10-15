@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prep Instructions | My GastroCare Patient Portal</title>
+  <meta name="description" content="Interactive Procedure Preparation - My GastroCare Portal">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg">
+  
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('gastrocare-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      const savedDir = localStorage.getItem('gastrocare-direction') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-wrap">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="d-flex align-items-center justify-content-between mb-4">
+        <a href="../index.html" class="d-block" aria-label="GastroCare Home">
+          <img src="../assets/images/logo/gastrocare-logo.svg" alt="GastroCare" class="gc-brand-logo">
+        </a>
+      </div>
+
+      <div class="sidebar-patient-card mb-4">
+        <div class="d-flex align-items-center gap-3">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--gc-primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.95rem; flex-shrink: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+            AM
+          </div>
+          <div>
+            <strong class="d-block small" style="line-height: 1.2; font-size: 0.92rem;">Alex Morgan</strong>
+            <small style="font-size: 0.76rem;">Patient ID: #GC-8841</small>
+          </div>
+        </div>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li>
+          <a href="dashboard.html" class="sidebar-link">Overview</a>
+        </li>
+        <li>
+          <a href="appointments.html" class="sidebar-link">Appointments</a>
+        </li>
+        <li>
+          <a href="prep-instructions.html" class="sidebar-link active">Prep Instructions</a>
+        </li>
+        <li>
+          <a href="test-results.html" class="sidebar-link">Test Results</a>
+        </li>
+        <li>
+          <a href="medical-history.html" class="sidebar-link">Medical History</a>
+        </li>
+        <li>
+          <a href="documents.html" class="sidebar-link">Documents</a>
+        </li>
+        <li>
+          <a href="profile.html" class="sidebar-link">My Profile</a>
+        </li>
+      </ul>
+
+      <div class="mt-auto pt-3 border-top">
+        <a href="../index.html" class="sidebar-link text-muted small">
+          <span>&#8592;</span> Return to Public Site
+        </a>
+        <a href="../auth/login.html" class="sidebar-link text-danger small">
+          <span>&#128274;</span> Sign Out
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-main">
+      <header class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+        <div class="d-flex align-items-center gap-3">
+          <button type="button" class="btn btn-sm btn-gc-outline d-lg-none" id="sidebarToggleBtn" aria-label="Toggle Navigation Sidebar">
+            &#9776; Menu
+          </button>
+          <div>
+            <a href="../index.html" class="text-decoration-none" style="color: inherit;" title="Return to GastroCare Homepage"><h2 class="h4 mb-0 d-inline-block">MY GASTROCARE</h2></a>
+            <small class="text-muted">Private Patient Health Companion (Fictional / Demo Portal)</small>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <button type="button" class="nav-control-btn theme-toggle-btn" aria-label="Toggle Theme">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+          <button type="button" class="rtl-toggle-btn">RTL</button>
+          <a href="../appointment.html" class="btn btn-sm btn-gc-primary">Book New Visit</a>
+        </div>
+      </header>
+
+      
+  <section class="mb-4 reveal">
+    <h1 class="h3 mb-1">INTERACTIVE PROCEDURE PREPARATION</h1>
+    <p class="text-muted">Interactive checklist for upcoming Upper Endoscopy on October 24, 2026.</p>
+  </section>
+
+  <section class="mb-4 reveal">
+    <div class="p-4 bg-white rounded border shadow-sm">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+        <h4 class="h5 mb-0">Preparation Progress</h4>
+        <strong id="prepProgressText" class="text-primary" style="color: var(--gc-primary) !important;">25% Completed</strong>
+      </div>
+      <div class="prep-progress-wrap">
+        <div class="prep-progress-bar" id="prepProgressBar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <small class="text-muted">Check off tasks as you complete them to track your readiness.</small>
+    </div>
+  </section>
+
+  <section class="mb-3">
+    <div class="prep-stage-card">
+      <div class="prep-stage-header">
+        <div class="d-flex align-items-center gap-3">
+          <span class="badge-gc badge-available">STAGE 1</span>
+          <h5 class="mb-0">72 Hours Before Procedure (Wednesday, Oct 21)</h5>
+        </div>
+        <span class="stage-toggle-icon fw-bold fs-5">−</span>
+      </div>
+      <ul class="prep-checklist">
+        <li class="prep-item">
+          <input type="checkbox" class="prep-checkbox" checked id="chk1">
+          <label for="chk1" class="small mb-0 text-dark">Review written clinic fasting instructions &amp; medication guidance.</label>
+        </li>
+        <li class="prep-item">
+          <input type="checkbox" class="prep-checkbox" checked id="chk2">
+          <label for="chk2" class="small mb-0 text-dark">Confirm responsible adult driver escort to accompany you home.</label>
+        </li>
+        <li class="prep-item">
+          <input type="checkbox" class="prep-checkbox" id="chk3">
+          <label for="chk3" class="small mb-0 text-dark">Stop iron supplements, psyllium husks, and high-fiber seeds.</label>
+        </li>
+      </ul>
+    </div>
+
+    <div class="prep-stage-card">
+      <div class="prep-stage-header">
+        <div class="d-flex align-items-center gap-3">
+          <span class="badge-gc badge-pending">STAGE 2</span>
+          <h5 class="mb-0">24 Hours Before Procedure (Friday, Oct 23)</h5>
+        </div>
+        <span class="stage-toggle-icon fw-bold fs-5">−</span>
+      </div>
+      <ul class="prep-checklist">
+        <li class="prep-item">
+          <input type="checkbox" class="prep-checkbox" id="chk4">
+          <label for="chk4" class="small mb-0 text-dark">Consume only light, easily digestible meals (broth, poultry, white rice).</label>
+        </li>
+        <li class="prep-item">
+          <input type="checkbox" class="prep-checkbox" id="chk5">
+          <label for="chk5" class="small mb-0 text-dark">No solid food after 11:59 PM (Midnight).</label>
+        </li>
+        <li class="prep-item">
+          <input type="checkbox" class="prep-checkbox" id="chk6">
+          <label for="chk6" class="small mb-0 text-dark">Maintain hydration with clear liquids (water, apple juice, herbal tea).</label>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="mb-4 reveal">
+    <div class="prep-stage-card">
+      <div class="prep-stage-header">
+        <div class="d-flex align-items-center gap-3">
+          <span class="badge-gc">STAGE 3</span>
+          <h5 class="mb-0">Procedure Day (Saturday, Oct 24)</h5>
+        </div>
+        <span class="stage-toggle-icon fw-bold fs-5">−</span>
+      </div>
+      <ul class="prep-checklist">
+        <li class="prep-item">
+          <input type="checkbox" class="prep-checkbox" id="chk7">
+          <label for="chk7" class="small mb-0 text-dark">No liquids of any kind within 3 hours of scheduled check-in time.</label>
+        </li>
+        <li class="prep-item">
+          <input type="checkbox" class="prep-checkbox" id="chk8">
+          <label for="chk8" class="small mb-0 text-dark">Take approved morning blood pressure medications with small sip of water.</label>
+        </li>
+        <li class="prep-item">
+          <input type="checkbox" class="prep-checkbox" id="chk9">
+          <label for="chk9" class="small mb-0 text-dark">Wear loose, comfortable clothing with easy-to-remove shoes.</label>
+        </li>
+      </ul>
+    </div>
+
+    <div class="prep-stage-card">
+      <div class="prep-stage-header">
+        <div class="d-flex align-items-center gap-3">
+          <span class="badge-gc">STAGE 4</span>
+          <h5 class="mb-0">Arrival &amp; Check-In</h5>
+        </div>
+        <span class="stage-toggle-icon fw-bold fs-5">−</span>
+      </div>
+      <ul class="prep-checklist">
+        <li class="prep-item">
+          <input type="checkbox" class="prep-checkbox" id="chk10">
+          <label for="chk10" class="small mb-0 text-dark">Arrive at Suite 400 Pavilion reception exactly at 08:00 AM.</label>
+        </li>
+        <li class="prep-item">
+          <input type="checkbox" class="prep-checkbox" id="chk11">
+          <label for="chk11" class="small mb-0 text-dark">Bring government photo ID and health insurance card.</label>
+        </li>
+        <li class="prep-item">
+          <input type="checkbox" class="prep-checkbox" id="chk12">
+          <label for="chk12" class="small mb-0 text-dark">Ensure your driver companion checks in at the reception desk.</label>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Clear Liquid & Medication Guidelines -->
+  <section class="mb-4 reveal">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="p-4 bg-white rounded border shadow-sm h-100">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="h6 fw-bold mb-0 text-dark">&#9749; Approved Clear Liquids</h5>
+            <span class="badge-gc badge-available">STAGE 2 DIET</span>
+          </div>
+          <p class="small text-muted mb-3">Anything you can see through clearly at room temperature without pulp or dairy.</p>
+          <ul class="list-unstyled small mb-0 d-flex flex-column gap-2">
+            <li class="d-flex align-items-center gap-2 text-dark">
+              <span class="text-success fw-bold">&#10003;</span> Clear chicken, beef, or vegetable broth
+            </li>
+            <li class="d-flex align-items-center gap-2 text-dark">
+              <span class="text-success fw-bold">&#10003;</span> Apple juice, white grape juice, lemonade (pulp-free)
+            </li>
+            <li class="d-flex align-items-center gap-2 text-dark">
+              <span class="text-success fw-bold">&#10003;</span> Plain water, black coffee, herbal tea (no creamer/milk)
+            </li>
+            <li class="d-flex align-items-center gap-2 text-danger fw-semibold">
+              <span>&#10007;</span> NO red, purple, or blue dyes (alters mucosal visualization)
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 bg-white rounded border shadow-sm h-100">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="h6 fw-bold mb-0 text-dark">&#128138; Medication Hold Protocol</h5>
+            <span class="badge-gc badge-pending">SAFETY PROTOCOL</span>
+          </div>
+          <p class="small text-muted mb-3">Guidelines for chronic medications before procedural sedation.</p>
+          <ul class="list-unstyled small mb-0 d-flex flex-column gap-2">
+            <li class="text-dark"><strong>Blood Pressure Meds:</strong> Take with a small sip of water on procedure morning.</li>
+            <li class="text-dark"><strong>Blood Thinners (Anticoagulants):</strong> Follow specific physician hold window (3-5 days).</li>
+            <li class="text-dark"><strong>Diabetes / Insulin:</strong> Hold morning oral diabetes medications while fasting.</li>
+            <li class="text-dark"><strong>Inhalers:</strong> Bring your prescribed rescue inhaler to the endoscopy pavilion.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Downloadable Prep Instructions & Helpline -->
+  <section class="mb-4 reveal">
+    <div class="portal-subcard d-flex justify-content-between align-items-center flex-wrap gap-3 p-4">
+      <div>
+        <h5 class="h6 fw-bold mb-1 text-dark">Printable Upper Endoscopy Prep Packet</h5>
+        <p class="small text-muted mb-0">Includes full schedule timeline, check-in map, and emergency hotline contact details.</p>
+      </div>
+      <div class="d-flex gap-2">
+        <button class="btn btn-sm btn-gc-outline" onclick="window.print()">Print Checklist</button>
+        <button class="btn btn-sm btn-gc-primary" onclick="showPortalToast('&#128190; Downloading verified PDF: Upper_Endoscopy_Prep_GastroCare.pdf...')">&#128190; Download PDF</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-2">
+    <div class="portal-subcard text-center py-3">
+      <small class="text-dark">Questions about sedation or prep steps? Call the Endoscopy Pavilion Nurse Coordinator at <strong>(206) 555-0182 Ext. 405</strong>.</small>
+    </div>
+  </section>
+
+
+      <div class="gc-disclaimer-box mt-5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <small><strong>Template Demo Notice:</strong> Dashboard records, procedure dates, prep checklists, and laboratory values shown are fictional demonstration data. Patients should always follow actual instructions provided by their treating healthcare team.</small>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/prep.js"></script>
+  <script src="../assets/js/results.js"></script>
+</body>
+</html>

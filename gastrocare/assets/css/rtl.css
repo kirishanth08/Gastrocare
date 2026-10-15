@@ -1,0 +1,127 @@
+/* ==========================================================================
+   GASTROCARE - RTL Stylesheet
+   Activated when [dir="rtl"] is set on <html> or <body>
+   Properly flips text alignment, margins, icons, timelines, and sidebar
+   ========================================================================== */
+
+[dir="rtl"] {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] .me-auto {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+[dir="rtl"] .ms-auto {
+  margin-right: auto !important;
+  margin-left: 0 !important;
+}
+
+[dir="rtl"] .me-1, [dir="rtl"] .me-2, [dir="rtl"] .me-3, [dir="rtl"] .me-4 {
+  margin-left: 1rem !important;
+  margin-right: 0 !important;
+}
+
+[dir="rtl"] .ms-1, [dir="rtl"] .ms-2, [dir="rtl"] .ms-3, [dir="rtl"] .ms-4 {
+  margin-right: 1rem !important;
+  margin-left: 0 !important;
+}
+
+[dir="rtl"] .text-start {
+  text-align: right !important;
+}
+
+[dir="rtl"] .text-end {
+  text-align: left !important;
+}
+
+/* Navbar */
+[dir="rtl"] .navbar-nav {
+  padding-right: 0;
+}
+
+[dir="rtl"] .gc-footer-links a:hover {
+  transform: translateX(-4px);
+}
+
+[dir="rtl"] .gc-footer-title::after {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+/* Timeline */
+[dir="rtl"] .journey-timeline::before {
+  left: 5%;
+  right: 5%;
+}
+
+@media (max-width: 991.98px) {
+  [dir="rtl"] .journey-timeline::before {
+    right: 36px;
+    left: auto;
+  }
+
+  [dir="rtl"] .journey-step {
+    text-align: right;
+    padding-right: 90px;
+    padding-left: 0;
+  }
+
+  [dir="rtl"] .journey-node {
+    right: 0;
+    left: auto;
+  }
+
+  [dir="rtl"] .dashboard-sidebar {
+    right: -300px;
+    left: auto;
+    border-left: 1px solid var(--gc-border);
+    border-right: none;
+    transition: right 0.3s ease;
+  }
+
+  [dir="rtl"] .dashboard-sidebar.show {
+    right: 0;
+    left: auto;
+  }
+}
+
+/* Dashboard Desktop */
+@media (min-width: 992px) {
+  [dir="rtl"] .dashboard-sidebar {
+    border-left: 1px solid var(--gc-border);
+    border-right: none;
+  }
+}
+
+/* Disclaimer panel */
+[dir="rtl"] .gc-disclaimer-box {
+  border-left: none;
+  border-right: 4px solid var(--gc-primary);
+}
+
+/* Results panel active hover */
+[dir="rtl"] .results-list-item:hover,
+[dir="rtl"] .results-list-item.active {
+  transform: translateX(-4px);
+}
+
+/* Back to top */
+[dir="rtl"] .back-to-top {
+  left: 24px;
+  right: auto;
+}
+
+/* Minimal Dropdown RTL */
+[dir="rtl"] .navbar-nav .dropdown-item:hover,
+[dir="rtl"] .navbar-nav .dropdown-item:focus {
+  transform: translateX(-3px) !important;
+}
+
+[dir="rtl"] .navbar-nav .dropdown-item.active::after {
+  margin-left: 0 !important;
+  margin-right: 0.75rem !important;
+}
+

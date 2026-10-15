@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="100%" height="100%" fill="none">
+    <rect width="400" height="480" rx="20" fill="#F7F2EB"/>
+    <!-- Organic backdrop -->
+    <path d="M 60 80 C 180 20, 340 50, 360 220 C 380 390, 240 440, 100 420 C 20 400, 10 200, 60 80 Z" fill="#EAE2D6"/>
+    <!-- Doctor Illustration Body -->
+    <circle cx="200" cy="160" r="75" fill="#FFFFFF" stroke="#8B9A6E" stroke-width="2"/>
+    <circle cx="200" cy="160" r="62" fill="#F7DFD5"/>
+    <!-- Face elements -->
+    <circle cx="180" cy="150" r="4" fill="#2F352B"/>
+    <circle cx="220" cy="150" r="4" fill="#2F352B"/>
+    <path d="M 188 175 Q 200 188 212 175" stroke="#2F352B" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <!-- Stethoscope around neck -->
+    <path d="M 160 210 C 160 270, 240 270, 240 210" stroke="#2F352B" stroke-width="3.5" fill="none"/>
+    <circle cx="200" cy="280" r="10" fill="#8B9A6E"/>
+    <!-- White Coat & Olive scrubs -->
+    <path d="M 100 410 C 100 280, 150 240, 200 240 C 250 240, 300 280, 300 410 Z" fill="#8B9A6E"/>
+    <path d="M 160 240 L 200 330 L 240 240 Z" fill="#FFFFFF"/>
+    
+    <!-- Info Overlay Card -->
+    <g transform="translate(30, 360)">
+      <rect width="340" height="96" rx="16" fill="#FFFFFF" stroke="#EEEEEE" stroke-width="1.5"/>
+      <text x="24" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="800" fill="#2F352B">Dr. Elena Rostova, MD</text>
+      <text x="24" y="52" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#8B9A6E">Clinical Hepatologist & Celiac Specialist</text>
+      <text x="24" y="74" font-family="'Inter', sans-serif" font-size="11" fill="#66744E">11+ Yrs Experience &#8226; Board-Certified Gastroenterologist</text>
+    </g>
+  </svg>

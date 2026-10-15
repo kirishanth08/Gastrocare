@@ -1,0 +1,649 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Overview | My GastroCare Patient Portal</title>
+  <meta name="description" content="My GastroCare Patient Dashboard Overview">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg">
+  
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('gastrocare-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      const savedDir = localStorage.getItem('gastrocare-direction') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-wrap">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="d-flex align-items-center justify-content-between mb-4">
+        <a href="../index.html" class="d-block" aria-label="GastroCare Home">
+          <img src="../assets/images/logo/gastrocare-logo.svg" alt="GastroCare" class="gc-brand-logo">
+        </a>
+      </div>
+
+      <div class="sidebar-patient-card mb-4">
+        <div class="d-flex align-items-center gap-3">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--gc-primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.95rem; flex-shrink: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+            AM
+          </div>
+          <div>
+            <strong class="d-block small" style="line-height: 1.2; font-size: 0.92rem;">Alex Morgan</strong>
+            <small style="font-size: 0.76rem;">Patient ID: #GC-8841</small>
+          </div>
+        </div>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li>
+          <a href="dashboard.html" class="sidebar-link active">Overview</a>
+        </li>
+        <li>
+          <a href="appointments.html" class="sidebar-link">Appointments</a>
+        </li>
+        <li>
+          <a href="prep-instructions.html" class="sidebar-link">Prep Instructions</a>
+        </li>
+        <li>
+          <a href="test-results.html" class="sidebar-link">Test Results</a>
+        </li>
+        <li>
+          <a href="medical-history.html" class="sidebar-link">Medical History</a>
+        </li>
+        <li>
+          <a href="documents.html" class="sidebar-link">Documents</a>
+        </li>
+        <li>
+          <a href="profile.html" class="sidebar-link">My Profile</a>
+        </li>
+      </ul>
+
+      <div class="mt-auto pt-3 border-top">
+        <a href="../index.html" class="sidebar-link text-muted small">&larr; Return to Public Site</a>
+        <a href="../auth/login.html" class="sidebar-link text-danger small">Sign Out</a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-main">
+      <header class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+        <div class="d-flex align-items-center gap-3">
+          <button type="button" class="btn btn-sm btn-gc-outline d-lg-none" id="sidebarToggleBtn" aria-label="Toggle Navigation Sidebar">
+            Menu
+          </button>
+          <div>
+            <a href="../index.html" class="text-decoration-none" style="color: inherit;" title="Return to GastroCare Homepage"><h2 class="h4 mb-0 d-inline-block">MY GASTROCARE</h2></a>
+            <small class="text-muted">Private Patient Health Companion (Fictional / Demo Portal)</small>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <button type="button" class="nav-control-btn theme-toggle-btn" aria-label="Toggle Theme">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+          <button type="button" class="rtl-toggle-btn">RTL</button>
+          <a href="../appointment.html" class="btn btn-sm btn-gc-primary">Book New Visit</a>
+        </div>
+      </header>
+
+      
+  <section class="mb-4 reveal">
+    <h1 class="h3 mb-1">WELCOME BACK, ALEX.</h1>
+    <p class="text-muted">Here’s an overview of your upcoming care and recent health information.</p>
+  </section>
+
+  <section class="mb-4 reveal">
+    <div class="row g-3">
+      <div class="col-xl-3 col-sm-6">
+        <div class="dashboard-stat-card">
+          <div class="stat-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <div>
+            <small class="text-muted d-block">Next Appointment</small>
+            <strong class="d-block">Dr. Maya Carter</strong>
+            <small class="text-primary font-weight-bold" style="color: var(--gc-primary) !important;">Oct 18 &bull; 10:30 AM</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-sm-6">
+        <div class="dashboard-stat-card">
+          <div class="stat-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+          </div>
+          <div>
+            <small class="text-muted d-block">Upcoming Procedure</small>
+            <strong class="d-block">Upper Endoscopy</strong>
+            <small class="text-muted">Oct 24 &bull; Suite B</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-sm-6">
+        <div class="dashboard-stat-card">
+          <div class="stat-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <div>
+            <small class="text-muted d-block">Latest Result</small>
+            <strong class="d-block">Blood Test Panel</strong>
+            <span class="badge-gc badge-available" style="font-size: 0.7rem; padding: 2px 8px;">Available</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-sm-6">
+        <div class="dashboard-stat-card">
+          <div class="stat-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div>
+            <small class="text-muted d-block">Preparation Status</small>
+            <strong class="d-block">Prep Begins Oct 23</strong>
+            <small class="text-warning font-weight-bold" style="color: var(--gc-warning) !important;">Stage 1 Active</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clinical Schedule & Diagnostic Reports -->
+  <section class="mb-4 reveal">
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <div class="p-4 bg-white rounded border shadow-sm h-100">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4 class="h5 mb-0">Upcoming Clinical Schedule</h4>
+            <a href="appointments.html" class="small fw-bold">View All &rarr;</a>
+          </div>
+          
+          <div class="portal-schedule-card mb-3">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <div>
+                <span class="badge-gc badge-available mb-1">CONFIRMED</span>
+                <h5 class="h6 mb-0 fw-bold">Pre-Procedure Consultation</h5>
+                <small class="text-muted">Dr. Maya Carter, MD, FACG &bull; Suite 400 Consultation Wing</small>
+              </div>
+              <div class="text-end">
+                <strong class="d-block text-dark">Oct 18, 2026</strong>
+                <small class="text-muted">10:30 AM</small>
+              </div>
+            </div>
+            <div class="d-flex gap-2 mt-2 pt-2 border-top">
+              <button class="btn btn-sm btn-gc-outline py-1 px-3 btn-view-appt" data-title="Pre-Procedure Consultation" data-doctor="Dr. Maya Carter, MD, FACG" data-datetime="Oct 18, 2026 at 10:30 AM" data-loc="Suite 400 Consultation Wing" data-notes="Pre-endoscopy airway and procedural clearance evaluation. Bring current medication list.">Details</button>
+              <button class="btn btn-sm btn-gc-secondary py-1 px-3 btn-reschedule-appt" data-id="APT-1082" data-title="Pre-Procedure Consultation">Cancel / Reschedule</button>
+            </div>
+          </div>
+
+          <div class="portal-schedule-card">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <div>
+                <span class="badge-gc badge-pending mb-1">PREP REQUIRED</span>
+                <h5 class="h6 mb-0 fw-bold">Diagnostic Upper Endoscopy (EGD)</h5>
+                <small class="text-muted">Dr. Maya Carter &bull; Endoscopy Pavilion Suite B</small>
+              </div>
+              <div class="text-end">
+                <strong class="d-block text-dark">Oct 24, 2026</strong>
+                <small class="text-muted">08:00 AM Check-In</small>
+              </div>
+            </div>
+            <div class="d-flex gap-2 mt-2 pt-2 border-top">
+              <a href="prep-instructions.html" class="btn btn-sm btn-gc-primary py-1 px-3">Open Prep Checklist</a>
+              <button class="btn btn-sm btn-gc-outline py-1 px-3 btn-view-appt" data-title="Diagnostic Upper Endoscopy (EGD)" data-doctor="Dr. Maya Carter, MD" data-datetime="Oct 24, 2026 at 08:00 AM (Check-in)" data-loc="Endoscopy Pavilion Suite B" data-notes="Fasting mandatory after midnight. Adult driver escort required for post-procedure discharge.">Appointment Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="p-4 bg-white rounded border shadow-sm h-100">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4 class="h5 mb-0">Recent Diagnostic Reports</h4>
+            <a href="test-results.html" class="small fw-bold">View Results &rarr;</a>
+          </div>
+          
+          <div class="portal-schedule-card mb-2 d-flex justify-content-between align-items-center py-2 px-3">
+            <div>
+              <strong class="d-block small text-dark">Gastrointestinal Blood Panel</strong>
+              <small class="text-muted">Oct 08, 2026 &bull; Dr. Julian Vance</small>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <span class="badge-gc badge-reviewed">Reviewed</span>
+              <button class="btn btn-sm btn-gc-outline py-1 px-2 btn-preview-report" data-title="Gastrointestinal Blood Panel" data-date="Oct 08, 2026" data-doctor="Dr. Julian Vance" data-findings="Hemoglobin: 14.2 g/dL (Normal). Comprehensive Metabolic Panel within healthy reference range. tTG-IgA negative for active Celiac disease.">View</button>
+            </div>
+          </div>
+
+          <div class="portal-schedule-card mb-2 d-flex justify-content-between align-items-center py-2 px-3">
+            <div>
+              <strong class="d-block small text-dark">Fecal Calprotectin Quantitative</strong>
+              <small class="text-muted">Sep 28, 2026 &bull; Dr. Sophia Chen</small>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <span class="badge-gc badge-reviewed">Reviewed</span>
+              <button class="btn btn-sm btn-gc-outline py-1 px-2 btn-preview-report" data-title="Fecal Calprotectin Quantitative" data-date="Sep 28, 2026" data-doctor="Dr. Sophia Chen" data-findings="Calprotectin level: 38 ug/g (Normal < 50 ug/g). Indicates absence of acute neutrophilic intestinal inflammation.">View</button>
+            </div>
+          </div>
+
+          <div class="portal-schedule-card d-flex justify-content-between align-items-center py-2 px-3">
+            <div>
+              <strong class="d-block small text-dark">Lactulose SIBO Breath Assay</strong>
+              <small class="text-muted">Oct 16, 2026 &bull; Lab In-Progress</small>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <span class="badge-gc badge-pending">Pending</span>
+              <button class="btn btn-sm btn-gc-secondary py-1 px-2" onclick="showPortalToast('&#9203; Specimen currently being processed by clinical laboratory. Results estimated within 48 hours.');">Status</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Active Care Plan Goals -->
+  <section class="mb-4 reveal">
+    <div class="p-4 bg-white rounded border shadow-sm">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4 class="h5 mb-0">Active Care Plan Goals</h4>
+        <span class="badge-gc badge-available">Adherence: 94%</span>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="portal-subcard h-100">
+            <strong class="d-block text-dark mb-1">Acid Suppression Protocol</strong>
+            <p class="small text-muted mb-0">Omeprazole 20mg daily 30 mins prior to breakfast. Re-evaluating post-endoscopy.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="portal-subcard h-100">
+            <strong class="d-block text-dark mb-1">Hydration &amp; Dietary Rhythm</strong>
+            <p class="small text-muted mb-0">Minimum 2.5L water daily. Cease food intake 3 hours prior to sleep.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="portal-subcard h-100">
+            <strong class="d-block text-dark mb-1">Endoscopy Escort Readiness</strong>
+            <p class="small text-muted mb-0">Adult escort confirmed for pickup at Suite B on Oct 24, 2026.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Care Team Directory & Medication Management Grid -->
+  <section class="mb-4 reveal">
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="p-4 bg-white rounded border shadow-sm h-100">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4 class="h5 mb-0">My Clinical Care Team</h4>
+            <button class="btn btn-sm btn-gc-outline" data-bs-toggle="modal" data-bs-target="#inquiryModal">+ Clinical Question</button>
+          </div>
+          
+          <div class="d-flex flex-column gap-3">
+            <div class="portal-subcard d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center gap-3">
+                <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--gc-primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">
+                  MC
+                </div>
+                <div>
+                  <strong class="d-block text-dark">Dr. Maya Carter, MD, FACG</strong>
+                  <small class="text-muted">Primary Gastroenterologist &bull; Suite 400</small>
+                </div>
+              </div>
+              <button class="btn btn-sm btn-gc-outline" onclick="openCareInquiry('Dr. Maya Carter')">Message</button>
+            </div>
+
+            <div class="portal-subcard d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center gap-3">
+                <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--gc-info); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">
+                  SJ
+                </div>
+                <div>
+                  <strong class="d-block text-dark">Sarah Jenkins, RN</strong>
+                  <small class="text-muted">Procedural Care Coordinator &bull; Ext. 405</small>
+                </div>
+              </div>
+              <button class="btn btn-sm btn-gc-outline" onclick="openCareInquiry('Sarah Jenkins, RN')">Message</button>
+            </div>
+
+            <div class="portal-subcard d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center gap-3">
+                <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--gc-success); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">
+                  MA
+                </div>
+                <div>
+                  <strong class="d-block text-dark">Mark Alistair, MS, RD</strong>
+                  <small class="text-muted">GI Clinical Dietitian &bull; Low-FODMAP Care</small>
+                </div>
+              </div>
+              <button class="btn btn-sm btn-gc-outline" onclick="openCareInquiry('Mark Alistair, MS, RD')">Message</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="p-4 bg-white rounded border shadow-sm h-100">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4 class="h5 mb-0">Active Prescription Protocols</h4>
+            <button class="btn btn-sm btn-gc-primary" data-bs-toggle="modal" data-bs-target="#refillModal">Request Refill</button>
+          </div>
+          
+          <div class="table-responsive">
+            <table class="table align-middle mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th>Medication</th>
+                  <th>Dosage / Rhythm</th>
+                  <th>Refills</th>
+                  <th class="text-end">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong class="d-block text-dark">Omeprazole DR</strong>
+                    <small class="text-muted">Capsule</small>
+                  </td>
+                  <td>20mg once daily</td>
+                  <td><span class="badge-gc badge-available">2 Left</span></td>
+                  <td class="text-end">
+                    <button class="btn btn-sm btn-gc-outline py-1 px-2" onclick="triggerQuickRefill('Omeprazole 20mg DR')">Refill</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong class="d-block text-dark">Dicyclomine HCl</strong>
+                    <small class="text-muted">Tablet</small>
+                  </td>
+                  <td>10mg PRN Spasms</td>
+                  <td><span class="badge-gc badge-pending">1 Left</span></td>
+                  <td class="text-end">
+                    <button class="btn btn-sm btn-gc-outline py-1 px-2" onclick="triggerQuickRefill('Dicyclomine 10mg HCl')">Refill</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong class="d-block text-dark">MiraLAX Powder</strong>
+                    <small class="text-muted">PEG 3350</small>
+                  </td>
+                  <td>Oct 23 Prep Protocol</td>
+                  <td><span class="badge-gc badge-reviewed">Dispensed</span></td>
+                  <td class="text-end">
+                    <a href="prep-instructions.html" class="btn btn-sm btn-gc-primary py-1 px-2">Instructions</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Daily Digestion & Symptom Tracker -->
+  <section class="mb-4 reveal">
+    <div class="p-4 bg-white rounded border shadow-sm">
+      <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+        <div>
+          <h4 class="h5 mb-1">Daily Gastrointestinal Health Logger</h4>
+          <p class="text-muted small mb-0">Record your digestion metrics to give your physician real-time data before your appointment.</p>
+        </div>
+        <span class="text-muted small">Session Date: <strong>Today</strong></span>
+      </div>
+
+      <form id="dailySymptomForm" class="row g-3 align-items-end">
+        <div class="col-md-3">
+          <label class="form-label small fw-bold">Reflux / Heartburn Severity</label>
+          <select class="form-select form-select-sm" id="refluxSeverity">
+            <option value="0">0 - None / Symptom-Free</option>
+            <option value="1" selected>1 - Mild / Brief post-meal</option>
+            <option value="2">2 - Moderate / Discomfort</option>
+            <option value="3">3 - Severe / Nocturnal awakening</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label class="form-label small fw-bold">Bristol Stool Scale</label>
+          <select class="form-select form-select-sm" id="bristolScale">
+            <option value="1">Type 1 - Separate hard lumps</option>
+            <option value="2">Type 2 - Sausage-like, lumpy</option>
+            <option value="3">Type 3 - Sausage with cracks</option>
+            <option value="4" selected>Type 4 - Smooth &amp; soft (Ideal)</option>
+            <option value="5">Type 5 - Soft blobs with clear cut</option>
+            <option value="6">Type 6 - Fluffy pieces, ragged</option>
+            <option value="7">Type 7 - Watery, no solid</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label class="form-label small fw-bold">Hydration Log (Liters)</label>
+          <input type="number" step="0.1" min="0" max="6" class="form-control form-control-sm" id="hydrationInput" value="2.2" required>
+        </div>
+        <div class="col-md-3">
+          <button type="submit" class="btn btn-sm btn-gc-primary w-100 py-2">Save Today's Entry</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Interactive Dashboard Modals -->
+  <!-- 1. Appointment Details Modal -->
+  <div class="modal fade" id="apptModal" tabindex="-1" aria-labelledby="apptModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title" id="apptModalLabel">Appointment Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <span class="badge-gc badge-available mb-2" id="modalApptBadge">Scheduled</span>
+            <h4 class="h5 text-dark" id="modalApptTitle">Pre-Procedure Consultation</h4>
+            <p class="text-muted small mb-0" id="modalApptDoctor">Dr. Maya Carter, MD, FACG</p>
+          </div>
+          <hr>
+          <div class="row g-2 small mb-3">
+            <div class="col-6"><strong>Date &amp; Time:</strong><br><span id="modalApptDateTime" class="text-muted">Oct 18, 2026 at 10:30 AM</span></div>
+            <div class="col-6"><strong>Location:</strong><br><span id="modalApptLoc" class="text-muted">Suite 400 Consultation Wing</span></div>
+          </div>
+          <div class="p-3 bg-secondary rounded border">
+            <strong class="d-block small text-dark mb-1">Clinical Instructions:</strong>
+            <p class="small text-muted mb-0" id="modalApptNotes">Check in at least 15 minutes before scheduled start time. Bring government photo ID and health insurance card.</p>
+          </div>
+        </div>
+        <div class="modal-footer border-top">
+          <button type="button" class="btn btn-sm btn-gc-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-sm btn-gc-primary" onclick="window.print()">Print Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Reschedule Appointment Modal -->
+  <div class="modal fade" id="rescheduleModal" tabindex="-1" aria-labelledby="rescheduleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title" id="rescheduleModalLabel">Reschedule Appointment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="rescheduleForm">
+          <div class="modal-body">
+            <input type="hidden" id="rescheduleApptId">
+            <p class="small text-muted mb-3">Select your preferred reschedule window. Our scheduling coordinator will confirm the new slot.</p>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Select Preferred Date</label>
+              <input type="date" class="form-control" required id="rescheduleDate" min="2026-10-19">
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Preferred Time Window</label>
+              <select class="form-select" id="rescheduleTime">
+                <option value="Morning (08:00 AM - 12:00 PM)">Morning (08:00 AM - 12:00 PM)</option>
+                <option value="Afternoon (12:00 PM - 04:00 PM)">Afternoon (12:00 PM - 04:00 PM)</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Reason for Rescheduling (Optional)</label>
+              <textarea class="form-control" rows="2" placeholder="e.g. Work conflict, transportation rescheduling..."></textarea>
+            </div>
+          </div>
+          <div class="modal-footer border-top">
+            <button type="button" class="btn btn-sm btn-gc-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-sm btn-gc-primary">Confirm Reschedule Request</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Prescription Refill Modal -->
+  <div class="modal fade" id="refillModal" tabindex="-1" aria-labelledby="refillModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title" id="refillModalLabel">Request Prescription Refill</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="refillForm">
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Select Medication</label>
+              <select class="form-select" id="refillMedSelect" required>
+                <option value="Omeprazole 20mg Delayed Release">Omeprazole 20mg Delayed Release (Daily)</option>
+                <option value="Dicyclomine 10mg Capsule">Dicyclomine 10mg Capsule (PRN Spasms)</option>
+                <option value="MiraLAX Polyethylene Glycol 3350">MiraLAX PEG 3350 Prep Packet</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Preferred Pharmacy</label>
+              <select class="form-select" id="refillPharmacySelect">
+                <option value="CVS Pharmacy #4021 - 4th Ave, Seattle, WA">CVS Pharmacy #4021 - 4th Ave, Seattle, WA (On File)</option>
+                <option value="Walgreens Pharmacy #1209 - Broadway, Seattle, WA">Walgreens Pharmacy #1209 - Broadway, Seattle, WA</option>
+                <option value="Mail Order Express Scripts">Mail Order Express Scripts (Home Delivery)</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Additional Notes for Clinician</label>
+              <input type="text" class="form-control" placeholder="e.g. 90-day supply requested if approved">
+            </div>
+          </div>
+          <div class="modal-footer border-top">
+            <button type="button" class="btn btn-sm btn-gc-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-sm btn-gc-primary">Submit Refill Request</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Diagnostic Report Viewer Modal -->
+  <div class="modal fade" id="reportModal" tabindex="-1" aria-labelledby="reportModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title" id="reportModalLabel">Diagnostic Report Summary</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="h6 mb-0 text-dark" id="reportModalTitle">Diagnostic Test</h5>
+            <span class="badge-gc badge-available" id="reportModalBadge">Official Record</span>
+          </div>
+          <small class="text-muted d-block mb-3" id="reportModalMeta">Date &bull; Reviewing Physician</small>
+          
+          <div class="p-3 bg-secondary rounded border mb-3">
+            <strong class="d-block small text-dark mb-1">Clinical Findings &amp; Summary:</strong>
+            <p class="small text-muted mb-0" id="reportModalFindings">Report details</p>
+          </div>
+          
+          <div class="small text-muted">
+            Certified by Board of Gastrointestinal Medicine &bull; GastroCare Clinic Seattle
+          </div>
+        </div>
+        <div class="modal-footer border-top">
+          <button type="button" class="btn btn-sm btn-gc-secondary" data-bs-dismiss="modal">Close</button>
+          <a href="test-results.html" class="btn btn-sm btn-gc-outline">Open Full Test Results</a>
+          <button type="button" class="btn btn-sm btn-gc-primary" onclick="window.print()">Print Report</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Clinical Inquiry Modal -->
+  <div class="modal fade" id="inquiryModal" tabindex="-1" aria-labelledby="inquiryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title" id="inquiryModalLabel">Send Clinical Question</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="inquiryForm">
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Recipient Clinician</label>
+              <input type="text" class="form-control" id="inquiryRecipient" value="Dr. Maya Carter, MD, FACG" readonly>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Subject / Category</label>
+              <select class="form-select">
+                <option>Procedure Prep Clarification</option>
+                <option>Medication Tolerance / Side Effect</option>
+                <option>Lab Result Explanation</option>
+                <option>General Follow-Up Question</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Your Question</label>
+              <textarea class="form-control" rows="3" placeholder="Type your non-urgent clinical question..." required></textarea>
+              <small class="text-muted">For urgent medical emergencies, please dial 911 immediately.</small>
+            </div>
+          </div>
+          <div class="modal-footer border-top">
+            <button type="button" class="btn btn-sm btn-gc-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-sm btn-gc-primary">Send Question</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container for Interactive Actions -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1200;">
+    <div id="portalLiveToast" class="toast align-items-center text-white bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body" id="toastMessage">
+          Action completed successfully.
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+      <div class="gc-disclaimer-box mt-5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <small><strong>Template Demo Notice:</strong> Dashboard records, procedure dates, prep checklists, and laboratory values shown are fictional demonstration data. Patients should always follow actual instructions provided by their treating healthcare team.</small>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/prep.js"></script>
+  <script src="../assets/js/results.js"></script>
+</body>
+</html>

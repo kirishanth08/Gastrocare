@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 76" width="340" height="76" fill="none">
+  <defs>
+    <linearGradient id="gcGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B9A6E"/>
+      <stop offset="100%" stop-color="#66744E"/>
+    </linearGradient>
+    <linearGradient id="gcSoft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EAE2D6"/>
+      <stop offset="100%" stop-color="#F7F2EB"/>
+    </linearGradient>
+    <style>
+      .logo-main-text { fill: #2F352B; }
+      .logo-tagline { fill: #66744E; }
+      .logo-emblem-bg { fill: url(#gcSoft); stroke: #8B9A6E; }
+      .logo-accent { fill: #8B9A6E; }
+      @media (prefers-color-scheme: dark) {
+        .logo-main-text { fill: #F7F2EB !important; }
+        .logo-tagline { fill: #CBD3C6 !important; }
+        .logo-emblem-bg { fill: #2F362D !important; stroke: #A4B588 !important; }
+        .logo-accent { fill: #A4B588 !important; }
+      }
+    </style>
+  </defs>
+  <!-- Abstract digestive flow emblem -->
+  <g transform="translate(6, 6)">
+    <circle cx="32" cy="32" r="30" class="logo-emblem-bg" fill="url(#gcSoft)" stroke="#8B9A6E" stroke-width="2"/>
+    <!-- Organic digestive flow path forming stylized G / flow -->
+    <path d="M 22 20 C 34 16, 44 24, 40 33 C 36 42, 22 36, 25 44 C 27 49, 36 50, 42 45" 
+          stroke="url(#gcGlow)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="22" cy="20" r="3.5" class="logo-accent" fill="#8B9A6E"/>
+    <circle cx="42" cy="45" r="3.5" class="logo-accent" fill="#8B9A6E"/>
+    <circle cx="33" cy="29" r="2.2" fill="#66744E"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="78" y="38" font-family="'Plus Jakarta Sans', 'Manrope', 'Segoe UI', sans-serif" font-size="25" font-weight="800" letter-spacing="1.5" class="logo-main-text" fill="#2F352B">GASTRO<tspan class="logo-accent" fill="#8B9A6E">CARE</tspan></text>
+  <text x="79" y="55" font-family="'Inter', 'Segoe UI', sans-serif" font-size="9" font-weight="600" letter-spacing="2.8" class="logo-tagline" fill="#66744E">BETTER DIGESTION. BETTER LIVING.</text>
+</svg>
