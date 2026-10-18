@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   'use strict';
 
   const filterBtns = document.querySelectorAll('.service-filter-btn');
-  const serviceCards = document.querySelectorAll('.service-item-col');
+  const serviceCards = document.querySelectorAll('.service-item-wrapper, .service-item-col');
 
   if (!filterBtns.length || !serviceCards.length) return;
 

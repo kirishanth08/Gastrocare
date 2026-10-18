@@ -452,9 +452,9 @@
     const switcherContainer = document.createElement('div');
     switcherContainer.className = 'service-switcher-bar border-bottom py-2 shadow-xs';
     switcherContainer.style.backgroundColor = 'var(--gc-card-bg, #ffffff)';
-    switcherContainer.style.position = 'sticky';
-    switcherContainer.style.top = '72px';
-    switcherContainer.style.zIndex = '990';
+    switcherContainer.style.position = 'relative';
+    switcherContainer.style.top = 'auto';
+    switcherContainer.style.zIndex = '10';
 
     switcherContainer.innerHTML = `
       <div class="container d-flex align-items-center gap-2 overflow-x-auto py-1" style="scrollbar-width: thin;">

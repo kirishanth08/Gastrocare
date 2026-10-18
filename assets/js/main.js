@@ -637,5 +637,38 @@ document.addEventListener('DOMContentLoaded', function() {
       openLegalModal(matchedType);
     }
   });
+
+  // Global Medical Document Downloader for all pages
+  window.triggerMedicalPdfDownload = function(docName) {
+    const cleanName = docName ? (docName.endsWith('.pdf') ? docName : docName + '.pdf') : 'GastroCare_Clinical_Document.pdf';
+    const fileTitle = cleanName.replace(/_/g, ' ').replace('.pdf', '');
+
+    const content = `%PDF-1.4\n% GastroCare Clinical Document\nDocument: ${fileTitle}\nDate: ${new Date().toLocaleDateString()}\nPatient: Alex Johnson (DOB: 05/14/1984)\nRecord ID: GC-882910\nClinic: GastroCare Gastroenterology & Digestive Health\nStatus: Official Verified Clinical Record\n\nThis certified clinical document was generated from the GastroCare Patient Portal.\nAll records and pathology reports are confidential and protected under HIPAA regulations.\n`;
+
+    const blob = new Blob([content], { type: 'application/pdf' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = cleanName;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 1500);
+
+    if (typeof showPortalToast === 'function') {
+      showPortalToast(`&#128190; Successfully downloaded: <strong>${cleanName}</strong>`);
+    } else if (typeof showToast === 'function') {
+      showToast(`&#128190; Successfully downloaded: ${cleanName}`);
+    }
+  };
+
+  document.addEventListener('click', function(e) {
+    const downloadBtn = e.target.closest('.btn-download-doc');
+    if (downloadBtn) {
+      e.preventDefault();
+      const docName = downloadBtn.getAttribute('data-name') || 'Medical_Document.pdf';
+      window.triggerMedicalPdfDownload(docName);
+    }
+  });
 });
 

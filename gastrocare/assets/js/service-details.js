@@ -1200,7 +1200,7 @@
         .map(
           (item, idx) => `
           <div class="col-md-6 fade-up-item is-visible">
-            <div class="clinical-focus-card">
+            <div class="clinical-focus-card h-100 d-flex flex-column">
               <div class="focus-card-header">
                 <div class="focus-icon-pill">
                   ${capabilityIcons[idx % capabilityIcons.length]}
@@ -1208,7 +1208,7 @@
                 <span class="focus-index-tag">0${idx + 1}</span>
               </div>
               <h5 class="focus-card-title">${item.title}</h5>
-              <p class="focus-card-desc mb-0">${item.desc}</p>
+              <p class="focus-card-desc mb-0 flex-grow-1">${item.desc}</p>
             </div>
           </div>
         `
@@ -1253,10 +1253,10 @@
         .map(
           step => `
           <div class="col-lg-3 col-md-6">
-            <div class="p-4 bg-white rounded-3 border h-100 shadow-sm position-relative">
-              <span class="badge-gc mb-2">${step.step}</span>
-              <h5 class="fs-6 fw-bold mb-2">${step.title}</h5>
-              <p class="small text-muted mb-0">${step.desc}</p>
+            <div class="p-4 bg-white rounded-3 border h-100 shadow-sm position-relative d-flex flex-column">
+              <span class="badge-gc mb-2 align-self-start">${step.step}</span>
+              <h5 class="fs-6 fw-bold mb-2 timeline-step-title">${step.title}</h5>
+              <p class="small text-muted mb-0 flex-grow-1 timeline-step-desc">${step.desc}</p>
             </div>
           </div>
         `
@@ -1280,7 +1280,7 @@
         const text = (name + ' ' + img).toLowerCase();
         if (text.includes('carter')) return 'maya-carter';
         if (text.includes('vance')) return 'julian-vance';
-        if (text.includes('chen')) return 'sophia-chen';
+        if (text.includes('chen') || text.includes('martinez')) return 'sophia-chen';
         if (text.includes('thorne')) return 'aris-thorne';
         if (text.includes('rostova')) return 'elena-rostova';
         if (text.includes('reed')) return 'marcus-reed';
@@ -1294,9 +1294,9 @@
             const docUrl = `doctor-details.html?doctor=${docKey}`;
             return `
           <div class="col-lg-6">
-            <div class="doctor-card flex-row p-3 gap-3 gap-md-4 align-items-center h-100">
-              <img src="${doc.image}" alt="${doc.name}" class="rounded-3 shadow-xs" style="width: 120px; height: 140px; object-fit: cover; flex-shrink: 0;">
-              <div>
+            <div class="doctor-card flex-column flex-sm-row p-3 gap-3 gap-md-4 align-items-sm-center align-items-start h-100">
+              <img src="${doc.image}" alt="${doc.name}" class="rounded-3 shadow-xs" style="width: 120px; height: 140px; object-fit: cover; flex-shrink: 0;" onerror="this.src='assets/images/doctors/dr-sophia-chen.jpg'">
+              <div class="flex-grow-1" style="min-width: 0;">
                 <span class="badge-gc mb-1">${doc.role}</span>
                 <h4 class="mb-1 fs-5">${doc.name}</h4>
                 <p class="small text-muted mb-2">${doc.desc}</p>
@@ -1367,9 +1367,9 @@
     const switcherContainer = document.createElement('div');
     switcherContainer.className = 'service-switcher-bar border-bottom py-2 shadow-xs';
     switcherContainer.style.backgroundColor = 'var(--gc-card-bg, #ffffff)';
-    switcherContainer.style.position = 'sticky';
-    switcherContainer.style.top = '72px';
-    switcherContainer.style.zIndex = '990';
+    switcherContainer.style.position = 'relative';
+    switcherContainer.style.top = 'auto';
+    switcherContainer.style.zIndex = '10';
 
     switcherContainer.innerHTML = `
       <div class="container d-flex align-items-center gap-2 overflow-x-auto py-1" style="scrollbar-width: thin;">

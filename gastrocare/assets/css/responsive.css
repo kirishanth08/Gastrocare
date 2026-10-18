@@ -24,13 +24,12 @@
 
 /* Tablets (768px - 1023.98px) */
 @media (max-width: 991.98px) {
-  .navbar-collapse {
-    background-color: var(--gc-card-bg);
-    border: 1px solid var(--gc-border);
-    border-radius: var(--gc-radius-md);
-    padding: 1.5rem;
-    margin-top: 1rem;
-    box-shadow: var(--gc-shadow-md);
+  .gc-navbar .navbar-collapse {
+    background-color: #161C14 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: var(--gc-radius-md) !important;
+    padding: 1.25rem !important;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6) !important;
   }
 
   .navbar-nav .nav-link {
@@ -115,12 +114,70 @@
 
 /* Mobile Phones (320px - 575.98px) */
 @media (max-width: 575.98px) {
-  h1 { font-size: 1.85rem; }
+  html, body {
+    overflow-x: clip !important;
+    max-width: 100vw !important;
+  }
+
+  /* Normalize large gutters on mobile to prevent viewport clipping */
+  .row.g-5 {
+    --bs-gutter-x: 1.25rem !important;
+    --bs-gutter-y: 2rem !important;
+  }
+
+  .gc-hero-bg {
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+
+  .gc-hero-bg h1,
+  .gc-hero-bg .h1,
+  h1 {
+    font-size: clamp(1.45rem, 6.2vw, 1.85rem) !important;
+    line-height: 1.25 !important;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .gc-hero-bg p.lead {
+    font-size: 0.92rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .gc-hero-bg .badge-gc {
+    font-size: 0.72rem !important;
+    padding: 0.35rem 0.65rem !important;
+    white-space: normal !important;
+    text-align: left !important;
+    display: inline-flex !important;
+    max-width: 100% !important;
+  }
+
+  .gc-hero-bg .d-flex.flex-wrap.gap-3 {
+    gap: 0.65rem !important;
+  }
+
+  .gc-hero-bg .d-flex.flex-wrap.gap-3 .btn {
+    width: 100% !important;
+    text-align: center;
+    justify-content: center;
+    margin: 0 !important;
+  }
+
   h2 { font-size: 1.5rem; }
   h3 { font-size: 1.25rem; }
 
-  .gc-brand-logo {
-    height: 36px;
+  .gc-brand-logo,
+  .gc-navbar .gc-brand-logo {
+    height: 36px !important;
+  }
+
+  .badge-gc {
+    white-space: normal !important;
+    max-width: 100%;
+    word-break: break-word;
+    text-align: center;
+    line-height: 1.35;
   }
 
   .btn {
@@ -141,6 +198,22 @@
     padding: 1.2rem;
   }
 
+  .doctor-card.flex-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .prep-guide-download-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.85rem !important;
+  }
+
+  .prep-guide-download-card .btn {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
   .journey-step {
     padding-left: 75px;
   }
@@ -154,24 +227,49 @@
   .nav-controls-group {
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.35rem;
   }
 
   .nav-control-btn {
-    width: 34px;
-    height: 34px;
-    font-size: 0.85rem;
+    width: 32px;
+    height: 32px;
+    font-size: 0.82rem;
+  }
+
+  .rtl-toggle-btn {
+    padding: 0.25rem 0.6rem;
+    font-size: 0.78rem;
   }
 
   .table-responsive {
     border: none;
   }
+
+  .form-select, .form-control {
+    max-width: 100% !important;
+  }
 }
 
 /* Ultra Narrow Phones (320px - 360px) */
 @media (max-width: 360px) {
-  .gc-brand-logo {
-    height: 30px;
+  .gc-hero-bg h1,
+  .gc-hero-bg .h1,
+  h1 {
+    font-size: 1.35rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .gc-hero-bg p.lead {
+    font-size: 0.88rem !important;
+  }
+
+  .gc-hero-bg .counter-val {
+    font-size: 1.25rem !important;
+  }
+
+  .gc-brand-logo,
+  .gc-navbar .gc-brand-logo {
+    height: 28px !important;
   }
 
   .btn {
