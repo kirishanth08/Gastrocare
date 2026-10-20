@@ -173,11 +173,17 @@
   }
 
   .badge-gc {
-    white-space: normal !important;
     max-width: 100%;
     word-break: break-word;
     text-align: center;
     line-height: 1.35;
+  }
+
+  .table .badge-gc,
+  .table td .badge-gc,
+  .table th .badge-gc,
+  .appt-row-item .badge-gc {
+    white-space: nowrap !important;
   }
 
   .btn {
